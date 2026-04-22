@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.UI;
+﻿namespace TournemantManager.UI;
 
 public class ConsolePrinter
 {

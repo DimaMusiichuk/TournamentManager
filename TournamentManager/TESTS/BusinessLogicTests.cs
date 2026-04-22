@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.TESTS;
+﻿namespace TournemantManager.TESTS;
 
 public class BusinessLogicTests
 {

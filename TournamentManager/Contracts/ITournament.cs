@@ -1,6 +1,6 @@
-﻿using Tournemant_Manager.Domain.Models;
+﻿using TournemantManager.Core.Models;
 
-namespace Tournemant_Manager.Contracts;
+namespace TournemantManager.Contracts;
 
 public interface ITournament
 {

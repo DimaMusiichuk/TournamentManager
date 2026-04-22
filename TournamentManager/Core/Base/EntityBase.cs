@@ -1,6 +1,6 @@
-﻿using Tournemant_Manager.Contracts;
+﻿using TournemantManager.Contracts;
 
-namespace Tournemant_Manager.Domain.Base;
+namespace TournemantManager.Core.Base;
 
 public abstract class EntityBase : IIdentifiable
 {

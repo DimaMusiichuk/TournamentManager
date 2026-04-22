@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.Domain.Logic;
+﻿namespace TournemantManager.Core.Logic;
 
 public class PlayOff
 {

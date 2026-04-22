@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.Domain.Enums;
+﻿namespace TournemantManager.Core.Enums;
 
 public class MatchStatus
 {

@@ -1,6 +1,10 @@
-﻿namespace Tournemant_Manager.Domain.Models;
+﻿using TournemantManager.Contracts;
+using TournemantManager.Core.Base;
 
-public class Team
+namespace TournemantManager.Core.Models;
+
+public class Team : EntityBase, IParticipant
 {
-    
+    public string Name { get; set; }
+    public List<Player> Players { get; set; } = new();
 }

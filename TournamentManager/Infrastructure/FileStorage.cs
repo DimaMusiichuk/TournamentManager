@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.Infrastructure;
+﻿namespace TournemantManager.Infrastructure;
 
 public class FileStorage
 {

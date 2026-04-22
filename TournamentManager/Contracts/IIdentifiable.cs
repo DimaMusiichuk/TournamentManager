@@ -1,4 +1,4 @@
-﻿namespace Tournemant_Manager.Contracts;
+﻿namespace TournemantManager.Contracts;
 
 public interface IIdentifiable
 {
