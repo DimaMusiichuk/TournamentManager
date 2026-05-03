@@ -1,6 +1,7 @@
 ﻿namespace TournemantManager.Core.Enums;
 
-public class TournamentType
+public enum TournamentType
 {
-    
+    SingleElimination,
+    DoubleElimination
 }
