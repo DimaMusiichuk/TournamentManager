@@ -11,4 +11,6 @@ public class TournamentSettings
     public int UpperBracketSlots  { get; set; }
     public int LowerBracketSlots  { get; set; }
     public int DrawPoint { get; set; }
+    public bool HasLowerBracket { get; set; }
+    public int AdvancingTeamsPerGroup { get; set; }
 }

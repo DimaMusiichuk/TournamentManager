@@ -5,10 +5,16 @@ namespace TournemantManager.Core.Logic;
 
 public class GroupStage
 {
-    public List<Match> Matches { get; set; } = new();
     private TournamentSettings _settings;
 
-    public List<Match> GruopCreator(IList<IParticipant>  participants, int numberOfGroups)
+    public List<Match> Matches { get; set; } = new();
+
+    public GroupStage(TournamentSettings settings)
+    {
+        _settings = settings;
+    }
+
+    public List<Match> GroupCreator(IList<IParticipant> participants, int numberOfGroups)
     {
         List<List<IParticipant>> groups = new();
         for (int i = 0; i < numberOfGroups; i++)
@@ -35,12 +41,8 @@ public class GroupStage
                 }   
             }
         }
+        
         return Matches;
-    }
-
-    public GroupStage(TournamentSettings settings)
-    {
-        _settings = settings;
     }
 
     public Dictionary<IParticipant, ParticipantStats> CalculateStandings(IList<IParticipant> participants)
@@ -53,9 +55,10 @@ public class GroupStage
 
         foreach (Match match in Matches)
         {
-            if (match.IsCompleted == true)
+            if (match.IsCompleted)
             {
                 var score = match.Scores[0];
+                
                 if (score.FirstScore > score.SecondScore)
                 {
                     standings[match.FirstParticipant].Points += _settings.WinPoint;
@@ -79,6 +82,16 @@ public class GroupStage
                 }
             }
         }
-        return standings;
+
+        var list = standings.ToList();
+        list.Sort((team1, team2) => team2.Value.Points.CompareTo(team1.Value.Points));
+        
+        var sortedStandings = new Dictionary<IParticipant, ParticipantStats>();
+        foreach (var team in list)
+        {
+            sortedStandings.Add(team.Key, team.Value);
+        }
+        
+        return sortedStandings;
     }
 }
