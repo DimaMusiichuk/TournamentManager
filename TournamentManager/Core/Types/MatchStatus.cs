@@ -1,6 +1,8 @@
 ﻿namespace TournemantManager.Core.Enums;
 
-public class MatchStatus
+public enum MatchStatus
 {
-    
+    Pending,
+    InProgress,
+    Finished
 }
