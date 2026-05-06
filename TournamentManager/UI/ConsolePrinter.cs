@@ -7,18 +7,22 @@ namespace TournemantManager.UI;
 
 public class ConsolePrinter
 {
-    public static void PrintGroupStage(Dictionary<IParticipant, ParticipantStats> standings) 
+    public static void PrintGroupStage(Dictionary<string, Dictionary<IParticipant, ParticipantStats>> allGroupStandings) 
     {
-        Console.WriteLine($"{"Group Place"} || {"Team Name"} || {"Wins"} || {"Draws"} || {"Losses"} || {"Points"}");
-        
-        int place = 1;
-        foreach (var row in standings)
+        foreach (var group in allGroupStandings)
         {
-            var participant = row.Key;
-            var stats = row.Value;
+            Console.WriteLine($"\n{group.Key}");
+            Console.WriteLine($"{"Place"} || {"Team Name"} || {"Wins"} || {"Draws"} || {"Losses"} || {"Points"}");
             
-            Console.WriteLine($"{place} || {participant.Name} || {stats.Wins} || {stats.Draws} || {stats.Losses} || {stats.Points}");
-            place++;
+            int place = 1;
+            foreach (var row in group.Value)
+            {
+                var participant = row.Key;
+                var stats = row.Value;
+                
+                Console.WriteLine($"{place} || {participant.Name} || {stats.Wins} || {stats.Draws} || {stats.Losses} || {stats.Points}");
+                place++;
+            }
         }
     }
     

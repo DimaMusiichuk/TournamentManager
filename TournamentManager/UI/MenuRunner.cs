@@ -26,6 +26,7 @@ public class MenuRunner
             Console.WriteLine("5 - Переглянути таблицю груп");
             Console.WriteLine("6 - Запустити Плей-оф");
             Console.WriteLine("7 - Переглянути сітку Плей-оф");
+            Console.WriteLine("8 - Переглянути список усіх команд та гравців");
             Console.WriteLine("0 - Вихід");
             Console.Write("Оберіть дію: ");
 
@@ -70,6 +71,11 @@ public class MenuRunner
                         ShowPlayOff();
                         break;
                     }
+                    case 8:
+                    {
+                        ShowAllTeams();
+                        break;
+                    }
                     case 0:
                     {
                         Console.WriteLine("Вихід з програми");
@@ -100,6 +106,12 @@ public class MenuRunner
 
         Console.Write("Введіть кількість команд для турніру (наприклад: 8, 12, 16): ");
         _settings.TotalTeams = int.Parse(Console.ReadLine()!);
+        
+        Console.Write("Скільки гравців має бути в одній команді? (наприклад: 5): ");
+        _settings.TeamSize = int.Parse(Console.ReadLine()!);
+        
+        Console.Write("Формат матчів у групі (1 - Bo1, 2 - Bo2, 3 - Bo3): ");
+        _settings.MatchesPerOpponent = int.Parse(Console.ReadLine()!);
 
         Console.Write("Введіть кількість очок за перемогу (рекомендовано 2): ");
         _settings.WinPoint = int.Parse(Console.ReadLine()!);
@@ -112,13 +124,12 @@ public class MenuRunner
 
         Console.Write("Введіть кількість груп (наприклад: 1, 2, 4): ");
         _settings.NumberOfGroups = int.Parse(Console.ReadLine()!);
+        
+        Console.Write("Чи буде турнір мати нижню сітку? (1 - Так, 0 - Ні): ");
+        _settings.HasLowerBracket = (Console.ReadLine() == "1");
 
         Console.Write("Скільки команд виходять у верхню сітку Плей-оф?: ");
         _settings.UpperBracketSlots = int.Parse(Console.ReadLine()!);
-
-        Console.Write("Чи буде турнір мати нижню сітку? (1 - Так, 0 - Ні): ");
-        string hasLower = Console.ReadLine()!;
-        _settings.HasLowerBracket = (hasLower == "1");
 
         if (_settings.HasLowerBracket)
         {
@@ -131,12 +142,24 @@ public class MenuRunner
 
     private void AddTeam()
     {
+        
+        if (_settings == null)
+        {
+            throw new InvalidOperationException("Спочатку налаштуйте турнір");
+        }
+        
         Console.WriteLine("\n--- Додавання команд та гравців ---");
         Console.WriteLine("Введіть '0', щоб повернутися в головне меню");
 
         while (true)
         {
-            Console.Write("\nВведіть назву команди (або '0' для виходу): ");
+            if (_tournament.Participants.Count >= _settings.TotalTeams)
+            {
+                Console.WriteLine("\nДосягнуто максимальну кількість команд для цього турніру!");
+                break;
+            }
+            
+            Console.Write("\nВведіть назву команди: ");
             string teamName = Console.ReadLine()!;
 
             if (teamName == "0") 
@@ -150,48 +173,80 @@ public class MenuRunner
                 Name = teamName 
             };
 
-            Console.WriteLine($"Команду '{teamName}' створено, додамо гравців");
-            Console.WriteLine("Введіть '0', щоб завершити склад цієї команди");
-
-            int playerIdCounter = 1;
-            while (true)
+            Console.WriteLine($"Команду '{teamName}' створено, потрібно додати {_settings.TeamSize} гравців");
+            
+            for (int i = 0; i < _settings.TeamSize; i++)
             {
-                Console.Write($"\nВведіть ім'я {playerIdCounter}-го гравця (або '0' щоб вийти): ");
-                string playerName = Console.ReadLine()!;
+                Console.WriteLine($"\nГравець {i + 1} з {_settings.TeamSize}:");
                 
-                if (playerName == "0") 
-                {
-                    break;
-                }
+                Console.Write("Нікнейм: ");
+                string nickname = Console.ReadLine()!;
+                
+                Console.Write("Ім'я: ");
+                string firstName = Console.ReadLine()!;
 
-                Console.Write("Введіть прізвище гравця: ");
+                Console.Write("Прізвище: ");
                 string secondName = Console.ReadLine()!;
 
-                Console.Write("Введіть вік гравця: ");
+                Console.Write("Вік: ");
                 int age = int.Parse(Console.ReadLine()!);
 
                 var player = new Player
                 {
-                    Id = (newTeam.Id * 100) + playerIdCounter, 
-                    Name = playerName,
+                    Id = (newTeam.Id * 100) + (i + 1), 
+                    Nickname = nickname,
+                    Name = firstName,
                     SecondName = secondName,
                     Age = age,
                     Team = teamName
                 };
 
                 newTeam.Players.Add(player);
-                playerIdCounter++;
-                Console.WriteLine($"[+] Гравця {playerName} {secondName} додано до команди");
             }
+            
+            Console.Write("\nЧи є у команди тренер? (1 - Так, 0 - Ні): ");
+            if (Console.ReadLine() == "1")
+            {
+                Console.Write("Введіть нікнейм тренера: ");
+                newTeam.Coach = Console.ReadLine()!;
+            }
+            
+            Console.WriteLine("\nХто з гравців є капітаном?");
+            for (int i = 0; i < newTeam.Players.Count; i++)
+            {
+                Console.WriteLine($"{i + 1} - {newTeam.Players[i].Nickname}");
+            }
+            Console.Write("Оберіть номер капітана: ");
+            int captIndex = int.Parse(Console.ReadLine()!) - 1;
+            newTeam.Captain = newTeam.Players[captIndex];
 
             _tournament.AddParticipant(newTeam);
             Console.WriteLine($"\nКоманду '{teamName}' збережено, гравців у складі: {newTeam.Players.Count}");
             Console.WriteLine($"Всього команд у турнірі: {_tournament.Participants.Count}");
-            
-            if (_settings != null && _tournament.Participants.Count == _settings.TotalTeams)
+        }
+    }
+    
+    private void ShowAllTeams()
+    {
+        if (_tournament.Participants.Count == 0)
+        {
+            Console.WriteLine("У турнірі ще немає команд");
+            return;
+        }
+
+        Console.WriteLine("\nСПИСОК КОМАНД УЧАСНИКІВ");
+        foreach (Team team in _tournament.Participants)
+        {
+            Console.WriteLine($"\nКоманда: {team.Name} (ID: {team.Id})");
+            Console.WriteLine($"Капітан: {team.Captain.Nickname}");
+            if (!string.IsNullOrEmpty(team.Coach))
             {
-                Console.WriteLine("\nДосягнуто максимальну кількість команд для цього турніру");
-                break;
+                Console.WriteLine($"Тренер: {team.Coach}");
+            }
+            Console.WriteLine("Склад:");
+            foreach (var player in team.Players)
+            {
+                Console.WriteLine($"- [{player.Nickname}] {player.Name} {player.SecondName}, {player.Age} років");
             }
         }
     }
@@ -214,7 +269,7 @@ public class MenuRunner
 
     private void UpdateGroupScores()
     {
-        if (_groupStage == null || _groupStage.Matches.Count == 0)
+        if (_groupStage == null || _groupStage.GroupMatches.Count == 0)
         {
             Console.WriteLine("Спочатку згенеруйте групи");
             return;
@@ -226,34 +281,82 @@ public class MenuRunner
         Console.Write("Вибір: ");
         string choice = Console.ReadLine()!;
 
-        Random rnd = new Random();
-
-        foreach (var match in _groupStage.Matches)
+        foreach (var groupPair in _groupStage.GroupMatches)
         {
-            if (match.IsCompleted) continue; 
-
-            var score = new Score();
-
             if (choice == "1")
             {
-                Console.WriteLine($"\nМатч: {match.FirstParticipant.Name} VS {match.SecondParticipant.Name}");
-                Console.Write($"Поінти команди {match.FirstParticipant.Name}: ");
-                score.FirstScore = int.Parse(Console.ReadLine()!);
-                Console.Write($"Поінти команди {match.SecondParticipant.Name}: ");
-                score.SecondScore = int.Parse(Console.ReadLine()!);
+                Console.WriteLine($"\n--- Оновлення результатів: {groupPair.Key} ---");
+            }
+
+            ProcessGroupMatches(groupPair.Value, choice, _settings.MatchesPerOpponent);
+        }
+        
+        Console.WriteLine("Всі матчі групового етапу оновлено");
+    }
+
+    private void ProcessGroupMatches(List<Match> groupMatchesList, string choice, int format)
+    {
+        Random rnd = new Random();
+        foreach (var match in groupMatchesList)
+        {
+            if (match.IsCompleted) 
+            {
+                continue; 
+            }
+
+            var score = new Score();
+            
+            if (choice == "1")
+            {
+                EnterManualScore(match, score, format);
             }
             else
             {
-                score.FirstScore = rnd.Next(0, 6);
-                score.SecondScore = rnd.Next(0, 6);
+                GenerateAutoScore(match, score, rnd, format);
             }
 
             match.Scores.Add(score);
             match.Status = MatchStatus.Finished;
             match.IsCompleted = true;
         }
+    }
+
+    private void EnterManualScore(Match match, Score score, int format)
+    {
+        while (true)
+        {
+            Console.WriteLine($"\nМатч: {match.FirstParticipant.Name} VS {match.SecondParticipant.Name}");
+            Console.Write($"Рахунок команди {match.FirstParticipant.Name}: ");
+            score.FirstScore = int.Parse(Console.ReadLine()!);
+            Console.Write($"Рахунок команди {match.SecondParticipant.Name}: ");
+            score.SecondScore = int.Parse(Console.ReadLine()!);
+
+            if (format == 2)
+            {
+                break;
+            }
+
+            if (score.FirstScore != score.SecondScore)
+            {
+                break; 
+            }
+            
+            Console.WriteLine("Помилка, в форматі матчів BO1 та BO3 нічия не можлива! Спробуйте ще раз.");
+        }
+    }
+
+    private void GenerateAutoScore(Match match, Score score, Random rnd, int format)
+    {
+        score.FirstScore = rnd.Next(0, 6);
+        score.SecondScore = rnd.Next(0, 6);
         
-        Console.WriteLine("Всі матчі групового етапу оновлено");
+        if (format != 2)
+        {
+            while (score.FirstScore == score.SecondScore)
+            {
+                score.SecondScore = rnd.Next(0, 6);
+            }
+        }
     }
 
     private void ShowGroupStandings()
@@ -265,7 +368,7 @@ public class MenuRunner
         }
 
         Console.WriteLine("\n--- Турнірна таблиця ---");
-        var standings = _groupStage.CalculateStandings(_tournament.Participants);
+        var standings = _groupStage.CalculateStandings(); 
         ConsolePrinter.PrintGroupStage(standings);
     }
 
@@ -278,12 +381,9 @@ public class MenuRunner
         }
 
         Console.WriteLine("\n--- Формування сітки Плей-оф ---");
-        var standings = _groupStage.CalculateStandings(_tournament.Participants);
+        var standings = _groupStage.CalculateStandings(); 
         
-        _playOff = new PlayOff(_settings);
-        _playOff.StartPlayOff(standings);
-        
-        Console.WriteLine("Сітку Плей-оф сформовано");
+        Console.WriteLine("Логіка генерації Плей-оф тимчасово вимкнена. Переходимо до Етапу 3!");
     }
 
     private void ShowPlayOff()

@@ -14,4 +14,6 @@ public class TournamentSettings
     public bool HasLowerBracket { get; set; }
     public int AdvancingTeamsPerGroup { get; set; }
     public int TotalTeams { get; set; }
+    public int TeamSize { get; set; }
+    public int MatchesPerOpponent { get; set; }
 }

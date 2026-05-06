@@ -1,4 +1,7 @@
-﻿using TournemantManager.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using TournemantManager.Contracts;
 using TournemantManager.Core.Models;
 
 namespace TournemantManager.Core.Logic;
@@ -7,7 +10,7 @@ public class GroupStage
 {
     private TournamentSettings _settings;
 
-    public List<Match> Matches { get; set; } = new();
+    public Dictionary<string, List<Match>> GroupMatches { get; set; } = new();
 
     public GroupStage(TournamentSettings settings)
     {
@@ -27,71 +30,112 @@ public class GroupStage
             int groupIndex = i % numberOfGroups;
             groups[groupIndex].Add(participants[i]);
         }
+        
+        List<Match> allMatchesToReturn = new();
+        char groupLetter = 'A';
 
         foreach (var group in groups)
         {
+            string groupName = $"Група {groupLetter}";
+            GroupMatches.Add(groupName, new List<Match>());
+            
             for (int i = 0; i < group.Count; i++)
             {
                 for (int j = i + 1; j < group.Count; j++)
                 {
-                    var match = new Match();
-                    match.FirstParticipant = group[i];
-                    match.SecondParticipant = group[j];
-                    Matches.Add(match);
-                }   
+                    GenerateMatchesBetweenOpponents(group[i], group[j], groupName, allMatchesToReturn);
+                }
             }
+            groupLetter++;
         }
-        
-        return Matches;
+        return allMatchesToReturn;
     }
 
-    public Dictionary<IParticipant, ParticipantStats> CalculateStandings(IList<IParticipant> participants)
+    private void GenerateMatchesBetweenOpponents(IParticipant first, IParticipant second, string groupName, List<Match> allMatches)
     {
-        var standings = new Dictionary<IParticipant, ParticipantStats>();
-        foreach (IParticipant p in participants)
+        for (int matchCount = 0; matchCount < _settings.MatchesPerOpponent; matchCount++)
         {
-            standings.Add(p, new ParticipantStats());
+            var match = new Match();
+            match.FirstParticipant = first;
+            match.SecondParticipant = second;
+            
+            GroupMatches[groupName].Add(match);
+            allMatches.Add(match);
         }
+    }
 
-        foreach (Match match in Matches)
+    public Dictionary<string, Dictionary<IParticipant, ParticipantStats>> CalculateStandings()
+    {
+       var allStandings = new Dictionary<string, Dictionary<IParticipant, ParticipantStats>>();
+
+        foreach (var groupPair in GroupMatches)
         {
-            if (match.IsCompleted)
+            string groupName = groupPair.Key;
+            List<Match> matchesInGroup = groupPair.Value;
+            
+            var groupStandings = new Dictionary<IParticipant, ParticipantStats>();
+
+            foreach (Match match in matchesInGroup)
             {
-                var score = match.Scores[0];
-                
-                if (score.FirstScore > score.SecondScore)
+                if (!groupStandings.ContainsKey(match.FirstParticipant))
                 {
-                    standings[match.FirstParticipant].Points += _settings.WinPoint;
-                    standings[match.FirstParticipant].Wins++;
-                    standings[match.SecondParticipant].Points += _settings.LosePoint;
-                    standings[match.SecondParticipant].Losses++;
+                    groupStandings.Add(match.FirstParticipant, new ParticipantStats());
                 }
-                else if (score.SecondScore > score.FirstScore)
+
+                if (!groupStandings.ContainsKey(match.SecondParticipant))
                 {
-                    standings[match.FirstParticipant].Points += _settings.LosePoint;
-                    standings[match.FirstParticipant].Losses++;
-                    standings[match.SecondParticipant].Points += _settings.WinPoint;
-                    standings[match.SecondParticipant].Wins++;
-                }
-                else
-                {
-                    standings[match.FirstParticipant].Points += _settings.DrawPoint;
-                    standings[match.FirstParticipant].Draws++;
-                    standings[match.SecondParticipant].Points += _settings.DrawPoint;
-                    standings[match.SecondParticipant].Draws++;
+                    groupStandings.Add(match.SecondParticipant, new ParticipantStats());
                 }
             }
-        }
 
-        var list = standings.ToList();
-        list.Sort((team1, team2) => team2.Value.Points.CompareTo(team1.Value.Points));
-        
-        var sortedStandings = new Dictionary<IParticipant, ParticipantStats>();
-        foreach (var team in list)
-        {
-            sortedStandings.Add(team.Key, team.Value);
+            foreach (Match match in matchesInGroup)
+            {
+                if (match.IsCompleted)
+                {
+                    UpdateStatsForCompletedMatch(match, groupStandings);
+                }
+            }
+
+            var list = groupStandings.ToList();
+            list.Sort((team1, team2) => team2.Value.Points.CompareTo(team1.Value.Points));
+            
+            var sortedStandings = new Dictionary<IParticipant, ParticipantStats>();
+            foreach (var team in list)
+            {
+                sortedStandings.Add(team.Key, team.Value);
+            }
+
+            allStandings.Add(groupName, sortedStandings);
         }
         
-        return sortedStandings;
+        return allStandings;
+    }
+
+    private void UpdateStatsForCompletedMatch(Match match, Dictionary<IParticipant, ParticipantStats> groupStandings)
+    {
+        int firstTeamTotalScore = match.Scores.Sum(s => s.FirstScore);
+        int secondTeamTotalScore = match.Scores.Sum(s => s.SecondScore);
+        
+        if (firstTeamTotalScore > secondTeamTotalScore)
+        {
+            groupStandings[match.FirstParticipant].Points += _settings.WinPoint;
+            groupStandings[match.FirstParticipant].Wins++;
+            groupStandings[match.SecondParticipant].Points += _settings.LosePoint;
+            groupStandings[match.SecondParticipant].Losses++;
+        }
+        else if (secondTeamTotalScore > firstTeamTotalScore)
+        {
+            groupStandings[match.FirstParticipant].Points += _settings.LosePoint;
+            groupStandings[match.FirstParticipant].Losses++;
+            groupStandings[match.SecondParticipant].Points += _settings.WinPoint;
+            groupStandings[match.SecondParticipant].Wins++;
+        }
+        else
+        {
+            groupStandings[match.FirstParticipant].Points += _settings.DrawPoint;
+            groupStandings[match.FirstParticipant].Draws++;
+            groupStandings[match.SecondParticipant].Points += _settings.DrawPoint;
+            groupStandings[match.SecondParticipant].Draws++;
+        }
     }
 }
