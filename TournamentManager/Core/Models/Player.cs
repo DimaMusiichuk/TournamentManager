@@ -10,4 +10,5 @@ public class Player : EntityBase, IParticipant
     public string Name { get; set; }
     public string Team { get; set; }
     public string Nickname { get; set; }
+    public string Country { get; set; }
 }

@@ -18,7 +18,14 @@ public class MenuRunner
     {
         while (true)
         {
-            Console.WriteLine("\n=== МЕНЮ ===");
+            if (_settings != null && string.IsNullOrEmpty(_settings.TournamentName))
+            {
+                Console.WriteLine($"{_settings.TournamentName} | Дисципліна: {_settings.Discipline}");
+            }
+            else
+            {
+                Console.WriteLine("\n=== МЕНЮ ===");
+            }
             Console.WriteLine("1 - Налаштувати формат турніру");
             Console.WriteLine("2 - Додати команду");
             Console.WriteLine("3 - Згенерувати групи");
@@ -27,6 +34,7 @@ public class MenuRunner
             Console.WriteLine("6 - Запустити Плей-оф");
             Console.WriteLine("7 - Переглянути сітку Плей-оф");
             Console.WriteLine("8 - Переглянути список усіх команд та гравців");
+            Console.WriteLine("9 - Зіграти матчі Плей-оф");
             Console.WriteLine("0 - Вихід");
             Console.Write("Оберіть дію: ");
 
@@ -76,6 +84,11 @@ public class MenuRunner
                         ShowAllTeams();
                         break;
                     }
+                    case 9:
+                    {
+                        UpdatePlayOffScores();
+                        break;
+                    }
                     case 0:
                     {
                         Console.WriteLine("Вихід з програми");
@@ -103,6 +116,12 @@ public class MenuRunner
     {
         Console.WriteLine("\n--- Налаштування турніру ---");
         _settings = new TournamentSettings();
+        
+        Console.Write("Введіть кіберспортивну дисципліну (наприклад, Dota 2, CS2): ");
+        _settings.Discipline = Console.ReadLine()!;
+        
+        Console.Write("Введіть назву турніру");
+        _settings.TournamentName = Console.ReadLine()!;
 
         Console.Write("Введіть кількість команд для турніру (наприклад: 8, 12, 16): ");
         _settings.TotalTeams = int.Parse(Console.ReadLine()!);
@@ -166,11 +185,15 @@ public class MenuRunner
             {
                 break;
             }
+            
+            Console.Write("Країна кіберспортивної команди:");
+            string teamCountry = Console.ReadLine()!;
 
             var newTeam = new Team 
             { 
                 Id = _tournament.Participants.Count + 1, 
-                Name = teamName 
+                Name = teamName,
+                TeamCountry = teamCountry
             };
 
             Console.WriteLine($"Команду '{teamName}' створено, потрібно додати {_settings.TeamSize} гравців");
@@ -190,6 +213,9 @@ public class MenuRunner
 
                 Console.Write("Вік: ");
                 int age = int.Parse(Console.ReadLine()!);
+                
+                Console.Write("Країна гравця: ");
+                string playerCountry = Console.ReadLine()!;
 
                 var player = new Player
                 {
@@ -198,6 +224,7 @@ public class MenuRunner
                     Name = firstName,
                     SecondName = secondName,
                     Age = age,
+                    Country = playerCountry,
                     Team = teamName
                 };
 
@@ -237,16 +264,16 @@ public class MenuRunner
         Console.WriteLine("\nСПИСОК КОМАНД УЧАСНИКІВ");
         foreach (Team team in _tournament.Participants)
         {
-            Console.WriteLine($"\nКоманда: {team.Name} (ID: {team.Id})");
-            Console.WriteLine($"Капітан: {team.Captain.Nickname}");
+            Console.WriteLine($"\nКоманда: {team.Name} [{team.TeamCountry}] (ID: {team.Id})");
+            Console.WriteLine($"Капітан: {team.Captain.Nickname}👑");
             if (!string.IsNullOrEmpty(team.Coach))
             {
-                Console.WriteLine($"Тренер: {team.Coach}");
+                Console.WriteLine($"Тренер: {team.Coach}©️");
             }
             Console.WriteLine("Склад:");
             foreach (var player in team.Players)
             {
-                Console.WriteLine($"- [{player.Nickname}] {player.Name} {player.SecondName}, {player.Age} років");
+                Console.WriteLine($"- [{player.Nickname}] {player.Name} {player.SecondName}, {player.Age} років, {player.Country}");
             }
         }
     }
@@ -383,7 +410,36 @@ public class MenuRunner
         Console.WriteLine("\n--- Формування сітки Плей-оф ---");
         var standings = _groupStage.CalculateStandings(); 
         
-        Console.WriteLine("Логіка генерації Плей-оф тимчасово вимкнена. Переходимо до Етапу 3!");
+        _playOff = new PlayOff(_settings);
+        _playOff.StartPlayOff(standings);
+        
+    }
+    
+    private void ProcessPlayOffMatches(List<Match> matches, string choice)
+    {
+        Random rnd = new Random();
+        foreach (var match in matches)
+        {
+            if (match.IsCompleted) 
+            {
+                continue; 
+            }
+
+            var score = new Score();
+            
+            if (choice == "1")
+            {
+                EnterManualScore(match, score, 1); 
+            }
+            else
+            {
+                GenerateAutoScore(match, score, rnd, 1); 
+            }
+
+            match.Scores.Add(score);
+            match.Status = MatchStatus.Finished;
+            match.IsCompleted = true;
+        }
     }
 
     private void ShowPlayOff()
@@ -394,7 +450,51 @@ public class MenuRunner
             return;
         }
 
-        Console.WriteLine("\n--- Матчі Верхньої сітки Плей-оф ---");
+        Console.WriteLine("\n--- Матчі верхньої сітки Плей-оф ---");
         ConsolePrinter.PrintPlayOff(_playOff.UpperMatches);
+        
+        if (_settings.HasLowerBracket && _playOff.LowerMatches.Count > 0)
+        {
+            Console.WriteLine("\n--- Матчі нижньої сітки Плей-оф ---");
+            ConsolePrinter.PrintPlayOff(_playOff.LowerMatches);
+        }
+    }
+    
+    private void UpdatePlayOffScores()
+    {
+        if (_playOff == null || _playOff.IsFinished)
+        {
+            Console.WriteLine("Плей-оф ще не запущено або турнір вже завершено");
+            return;
+        }
+
+        Console.WriteLine("\nЯк хочете ввести результати Плей-оф?");
+        Console.WriteLine("1 - Вручну");
+        Console.WriteLine("2 - Автоматично (випадкові рахунки)");
+        Console.Write("Вибір: ");
+        string choice = Console.ReadLine()!;
+
+        Console.WriteLine("\n--- Граємо Верхню сітку ---");
+        ProcessPlayOffMatches(_playOff.UpperMatches, choice);
+
+        if (_settings.HasLowerBracket && _playOff.LowerMatches.Count > 0)
+        {
+            Console.WriteLine("\n--- Граємо Нижню сітку ---");
+            ProcessPlayOffMatches(_playOff.LowerMatches, choice);
+        }
+
+        if (_playOff.AreAllMatchesCompleted())
+        {
+            _playOff.AdvanceToNextRound();
+            
+            if (_playOff.IsFinished)
+            {
+                Console.WriteLine($"🏆 ТУРНІР ЗАВЕРШЕНО! ПЕРЕМОЖЕЦЬ: {_playOff.TournamentWinner.Name} 🏆");
+            }
+            else
+            {
+                Console.WriteLine("\nУсі матчі поточного раунду зіграно, сформовано наступний етап Плей-оф.");
+            }
+        }
     }
 }

@@ -16,4 +16,6 @@ public class TournamentSettings
     public int TotalTeams { get; set; }
     public int TeamSize { get; set; }
     public int MatchesPerOpponent { get; set; }
+    public string TournamentName { get; set; }
+    public string Discipline { get; set; }
 }
