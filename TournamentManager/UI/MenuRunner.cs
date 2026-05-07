@@ -4,6 +4,8 @@ using TournemantManager.Contracts;
 using TournemantManager.Core.Enums;
 using TournemantManager.Core.Logic;
 using TournemantManager.Core.Models;
+using TournemantManager.Core.Exceptions;
+using TournemantManager.Infrastructure;
 
 namespace TournemantManager.UI;
 
@@ -120,7 +122,7 @@ public class MenuRunner
         Console.Write("Введіть кіберспортивну дисципліну (наприклад, Dota 2, CS2): ");
         _settings.Discipline = Console.ReadLine()!;
         
-        Console.Write("Введіть назву турніру");
+        Console.Write("Введіть назву турніру: ");
         _settings.TournamentName = Console.ReadLine()!;
 
         Console.Write("Введіть кількість команд для турніру (наприклад: 8, 12, 16): ");
@@ -205,14 +207,9 @@ public class MenuRunner
                 Console.Write("Нікнейм: ");
                 string nickname = Console.ReadLine()!;
                 
-                Console.Write("Ім'я: ");
-                string firstName = Console.ReadLine()!;
-
-                Console.Write("Прізвище: ");
-                string secondName = Console.ReadLine()!;
-
-                Console.Write("Вік: ");
-                int age = int.Parse(Console.ReadLine()!);
+                string firstName = GetValidFirstName();
+                string secondName = GetValidSecondName();
+                int age = GetValidAge();
                 
                 Console.Write("Країна гравця: ");
                 string playerCountry = Console.ReadLine()!;
@@ -460,6 +457,89 @@ public class MenuRunner
         }
     }
     
+    private string GetValidFirstName()
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write("Ім'я: ");
+                string input = Console.ReadLine()!;
+                
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    throw new InvalidNameFormatException("Поле не може бути порожнім!");
+                }
+
+                if (!char.IsUpper(input[0]))
+                {
+                    throw new InvalidNameFormatException("Ім'я повинно починатися з великої літери");
+                }
+                
+                return input;
+            }
+            catch (InvalidNameFormatException ex)
+            {
+                Console.WriteLine($"Помилка: {ex.Message}");
+            }
+        }
+    }
+    
+    private string GetValidSecondName()
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write("Прізвище: ");
+                string input = Console.ReadLine()!;
+                
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    throw new InvalidNameFormatException("Поле не може бути порожнім");
+                }
+
+                if (!char.IsUpper(input[0]))
+                {
+                    throw new InvalidNameFormatException("Прізвище повинно починатися з великої літери");
+                }
+                
+                return input;
+            }
+            catch (InvalidNameFormatException ex)
+            {
+                Console.WriteLine($"Помилка: {ex.Message}");
+            }
+        }
+    }
+    
+    private int GetValidAge()
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write("Вік: ");
+                int age = int.Parse(Console.ReadLine()!);
+                
+                if (age < 13 || age > 45)
+                {
+                    throw new InvalidAgeException("Вік повинен бути від 13 до 45 років");
+                }
+                
+                return age;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Помилка: введіть число");
+            }
+            catch (InvalidAgeException ex)
+            {
+                Console.WriteLine($"Помилка: {ex.Message}");
+            }
+        }
+    }
+    
     private void UpdatePlayOffScores()
     {
         if (_playOff == null || _playOff.IsFinished)
@@ -495,6 +575,47 @@ public class MenuRunner
             {
                 Console.WriteLine("\nУсі матчі поточного раунду зіграно, сформовано наступний етап Плей-оф.");
             }
+        }
+    }
+    
+    private void SaveTournament()
+    {
+        try
+        {
+            var storage = new FileStorage<Tournament>("tournament_data.json");
+            
+            storage.Save(_tournament);
+            
+            Console.WriteLine("Дані турніру збережено у файл tournament_data.json");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Помилка при збереженні: {ex.Message}");
+        }
+    }
+
+    private void LoadTournament()
+    {
+        try
+        {
+            var storage = new FileStorage<Tournament>("tournament_data.json");
+            
+            var loadedTournament = storage.Load();
+            
+            if (loadedTournament != null)
+            {
+                _tournament = loadedTournament;
+                Console.WriteLine("Дані турніру завантажено");
+                Console.WriteLine($"Кількість команд у турнірі: {_tournament.Participants.Count}");
+            }
+            else
+            {
+                Console.WriteLine("Файл збереження не знайдено, спочатку збережіть турнір");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Помилка при завантаженні: {ex.Message}");
         }
     }
 }
