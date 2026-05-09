@@ -37,6 +37,9 @@ public class MenuRunner
             Console.WriteLine("7 - Переглянути сітку Плей-оф");
             Console.WriteLine("8 - Переглянути список усіх команд та гравців");
             Console.WriteLine("9 - Зіграти матчі Плей-оф");
+            Console.WriteLine("10 - Зберегти турнір у файл");
+            Console.WriteLine("11 - Завантажити турнір з файлу");
+            Console.WriteLine("12 - Зіграти переігровки груп");
             Console.WriteLine("0 - Вихід");
             Console.Write("Оберіть дію: ");
 
@@ -89,6 +92,21 @@ public class MenuRunner
                     case 9:
                     {
                         UpdatePlayOffScores();
+                        break;
+                    }
+                    case 10:
+                    {
+                        SaveTournament();
+                        break;
+                    }
+                    case 11:
+                    {
+                        LoadTournament();
+                        break;
+                    }
+                    case 12:
+                    {
+                        PlayTiebreakers();
                         break;
                     }
                     case 0:
@@ -163,7 +181,6 @@ public class MenuRunner
 
     private void AddTeam()
     {
-        
         if (_settings == null)
         {
             throw new InvalidOperationException("Спочатку налаштуйте турнір");
@@ -176,20 +193,19 @@ public class MenuRunner
         {
             if (_tournament.Participants.Count >= _settings.TotalTeams)
             {
-                Console.WriteLine("\nДосягнуто максимальну кількість команд для цього турніру!");
+                Console.WriteLine("Досягнуто максимальну кількість команд для цього турніру!");
                 break;
             }
             
-            Console.Write("\nВведіть назву команди: ");
-            string teamName = Console.ReadLine()!;
+            Console.Write("Введіть назву команди: ");
+            string teamName = GetValidTeamName();
 
             if (teamName == "0") 
             {
                 break;
             }
             
-            Console.Write("Країна кіберспортивної команди:");
-            string teamCountry = Console.ReadLine()!;
+            string teamCountry = GetValidCountry("кіберспортивної команди");
 
             var newTeam = new Team 
             { 
@@ -211,8 +227,7 @@ public class MenuRunner
                 string secondName = GetValidSecondName();
                 int age = GetValidAge();
                 
-                Console.Write("Країна гравця: ");
-                string playerCountry = Console.ReadLine()!;
+                string playerCountry = GetValidCountry("гравця");
 
                 var player = new Player
                 {
@@ -412,9 +427,20 @@ public class MenuRunner
         
     }
     
-    private void ProcessPlayOffMatches(List<Match> matches, string choice)
+    private void ProcessPlayOffMatches(List<Match> matches, string choice, bool isFinalMatch)
     {
         Random rnd = new Random();
+        
+        int format;
+        if (isFinalMatch)
+        {
+            format = 5;
+        }
+        else
+        {
+            format = 3;
+        }
+        
         foreach (var match in matches)
         {
             if (match.IsCompleted) 
@@ -426,11 +452,11 @@ public class MenuRunner
             
             if (choice == "1")
             {
-                EnterManualScore(match, score, 1); 
+                EnterManualScore(match, score, format); 
             }
             else
             {
-                GenerateAutoScore(match, score, rnd, 1); 
+                GenerateAutoScore(match, score, rnd, format); 
             }
 
             match.Scores.Add(score);
@@ -540,6 +566,70 @@ public class MenuRunner
         }
     }
     
+    private string GetValidCountry(string target)
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write($"Країна {target}: ");
+                string input = Console.ReadLine()!;
+                
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    throw new InvalidCountryException("Поле країни не може бути порожнім");
+                }
+
+                if (!char.IsUpper(input[0]))
+                {
+                    throw new InvalidCountryException("Назва країни повинна починатися з великої літери");
+                }
+                
+                return input;
+            }
+            catch (InvalidCountryException ex)
+            {
+                Console.WriteLine($"Помилка: {ex.Message}");
+            }
+        }
+    }
+    
+    private string GetValidTeamName()
+    {
+        while (true)
+        {
+            try
+            {
+                Console.Write("Введіть назву команди: ");
+                string teamName = Console.ReadLine()!;
+
+                if (teamName == "0") 
+                {
+                    return teamName;
+                }
+
+                if (string.IsNullOrWhiteSpace(teamName))
+                {
+                    Console.WriteLine("Помилка: Назва команди не може бути порожньою");
+                    continue;
+                }
+
+                bool teamExists = _tournament.Participants.Any(p => p.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase));
+                
+                if (teamExists)
+                {
+                    throw new DuplicateTeamException($"Команда з назвою '{teamName}' вже зареєстрована в турнірі!");
+                }
+                
+                return teamName;
+            }
+            catch (DuplicateTeamException ex)
+            {
+                Console.WriteLine($"Помилка: {ex.Message}");
+            }
+        }
+    }
+    
     private void UpdatePlayOffScores()
     {
         if (_playOff == null || _playOff.IsFinished)
@@ -553,14 +643,19 @@ public class MenuRunner
         Console.WriteLine("2 - Автоматично (випадкові рахунки)");
         Console.Write("Вибір: ");
         string choice = Console.ReadLine()!;
+        
+        bool isUpperFinal = _playOff.UpperMatches.Count == 1;
 
         Console.WriteLine("\n--- Граємо Верхню сітку ---");
-        ProcessPlayOffMatches(_playOff.UpperMatches, choice);
+        ProcessPlayOffMatches(_playOff.UpperMatches, choice, isUpperFinal);
 
         if (_settings.HasLowerBracket && _playOff.LowerMatches.Count > 0)
         {
+            
+            bool isLowerFinal = _playOff.LowerMatches.Count == 1;
+            
             Console.WriteLine("\n--- Граємо Нижню сітку ---");
-            ProcessPlayOffMatches(_playOff.LowerMatches, choice);
+            ProcessPlayOffMatches(_playOff.LowerMatches, choice, isLowerFinal);
         }
 
         if (_playOff.AreAllMatchesCompleted())
@@ -617,5 +712,35 @@ public class MenuRunner
         {
             Console.WriteLine($"Помилка при завантаженні: {ex.Message}");
         }
+    }
+    
+    private void PlayTiebreakers()
+    {
+        if (_groupStage == null)
+        {
+            Console.WriteLine("Спочатку згенеруйте групи та зіграйте матчі");
+            return;
+        }
+
+        var standings = _groupStage.CalculateStandings();
+        _groupStage.GenerateTiebreakers(standings);
+
+        if (_groupStage.TiebreakerMatches.Count == 0)
+        {
+            Console.WriteLine("Команди не мають однакової кількості очок в групі, переігровки не потрібні");
+            return;
+        }
+
+        Console.WriteLine($"Знайдено {_groupStage.TiebreakerMatches.Count} матчів-переігровок");
+        Console.WriteLine("Як хочете зіграти ці тайбрейкери (формат Bo1)");
+        Console.WriteLine("1 - Вручну");
+        Console.WriteLine("2 - Автоматично (випадкові рахунки)");
+        Console.Write("Вибір: ");
+        string choice = Console.ReadLine()!;
+
+        ProcessGroupMatches(_groupStage.TiebreakerMatches, choice, 1);
+
+        Console.WriteLine("Переігровки завершено, оновлена таблиця:");
+        ShowGroupStandings();
     }
 }

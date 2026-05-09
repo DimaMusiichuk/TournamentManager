@@ -13,3 +13,17 @@ public class InvalidAgeException : Exception
     { 
     }
 }
+
+public class InvalidCountryException : Exception
+{
+    public InvalidCountryException(string message) : base(message) 
+    { 
+    }
+}
+
+public class DuplicateTeamException : Exception
+{
+    public DuplicateTeamException(string message) : base(message) 
+    { 
+    }
+}

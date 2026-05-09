@@ -11,6 +11,8 @@ public class GroupStage
     private TournamentSettings _settings;
 
     public Dictionary<string, List<Match>> GroupMatches { get; set; } = new();
+    
+    public List<Match> TiebreakerMatches { get; set; } = new();
 
     public GroupStage(TournamentSettings settings)
     {
@@ -136,6 +138,31 @@ public class GroupStage
             groupStandings[match.FirstParticipant].Draws++;
             groupStandings[match.SecondParticipant].Points += _settings.DrawPoint;
             groupStandings[match.SecondParticipant].Draws++;
+        }
+    }
+    
+    public void GenerateTiebreakers(Dictionary<string, Dictionary<IParticipant, ParticipantStats>> currentStandings)
+    {
+        TiebreakerMatches.Clear();
+
+        foreach (var groupPair in currentStandings)
+        {
+            string groupName = groupPair.Key;
+            var teams = groupPair.Value.ToList();
+
+            for (int i = 0; i < teams.Count - 1; i++)
+            {
+                if (teams[i].Value.Points == teams[i + 1].Value.Points)
+                {
+                    var match = new Match();
+                    match.FirstParticipant = teams[i].Key;
+                    match.SecondParticipant = teams[i + 1].Key;
+                    
+                    TiebreakerMatches.Add(match);
+                    
+                    GroupMatches[groupName].Add(match); 
+                }
+            }
         }
     }
 }

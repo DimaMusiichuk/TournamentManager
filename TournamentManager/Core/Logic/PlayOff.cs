@@ -102,46 +102,84 @@ public class PlayOff
             return;
         }
 
-        bool upperFinished = AdvanceBracket(UpperMatches, true);
-        bool lowerFinished = true;
-
-        if (_settings.HasLowerBracket)
+        if (CheckIfTournamentFinished())
         {
-            lowerFinished = AdvanceBracket(LowerMatches, false);
+            return;
+        }
+        
+        List<IParticipant> upperWinners = new();
+        List<IParticipant> upperLosers = new();
+        
+        ProcessUpperBracket(upperWinners, upperLosers);
+        ProcessLowerBracket(upperWinners, upperLosers);
+    }
+    
+    private bool CheckIfTournamentFinished()
+    {
+        if (UpperMatches.Count == 1 && (!_settings.HasLowerBracket || LowerMatches.Count == 0))
+        {
+            TournamentWinner = GetMatchWinner(UpperMatches[0]);
+            IsFinished = true;
+            UpperMatches.Clear();
+            return true;
+        }
+        return false;
+    }
+    
+    private void ProcessUpperBracket(List<IParticipant> upperWinners, List<IParticipant> upperLosers)
+    {
+        foreach (var match in UpperMatches)
+        {
+            upperWinners.Add(GetMatchWinner(match));
+            if (_settings.HasLowerBracket)
+            {
+                upperLosers.Add(GetMatchLoser(match));
+            }
         }
 
-        if (upperFinished && lowerFinished)
+        if (upperWinners.Count > 1)
         {
+            GenerateNextRound(upperWinners, UpperMatches);
+        }
+        else if (upperWinners.Count == 1 && !_settings.HasLowerBracket)
+        {
+            TournamentWinner = upperWinners[0];
             IsFinished = true;
+            UpperMatches.Clear();
         }
     }
-
-    private bool AdvanceBracket(List<Match> bracket, bool isUpper)
+    
+    private void ProcessLowerBracket(List<IParticipant> upperWinners, List<IParticipant> upperLosers)
     {
-        if (bracket.Count == 0)
+        if (!_settings.HasLowerBracket)
         {
-            return true; 
+            return;
         }
 
-        if (bracket.Count == 1)
+        List<IParticipant> nextLowerParticipants = new();
+        
+        foreach (var match in LowerMatches)
         {
-            var winner = GetMatchWinner(bracket[0]);
-            if (isUpper)
-            {
-                TournamentWinner = winner;
-            }
-            bracket.Clear(); 
-            return true; 
+            nextLowerParticipants.Add(GetMatchWinner(match));
         }
+        
+        nextLowerParticipants.AddRange(upperLosers);
 
-        List<IParticipant> winners = new();
-        foreach (var match in bracket)
+        if (upperWinners.Count == 1 && nextLowerParticipants.Count == 1)
         {
-            winners.Add(GetMatchWinner(match));
+            UpperMatches.Clear();
+            LowerMatches.Clear();
+            
+            var grandFinal = new Match();
+            grandFinal.FirstParticipant = upperWinners[0];
+            grandFinal.SecondParticipant = nextLowerParticipants[0];
+            
+            UpperMatches.Add(grandFinal);
         }
-
-        GenerateNextRound(winners, bracket);
-        return false; 
+        else if (nextLowerParticipants.Count > 1)
+        {
+            GenerateNextRound(nextLowerParticipants, LowerMatches);
+        }
     }
 
     private void GenerateNextRound(List<IParticipant> winners, List<Match> targetBracket)
@@ -156,19 +194,55 @@ public class PlayOff
             targetBracket.Add(match);
         }
     }
-
-    private IParticipant GetMatchWinner(Match match)
+    
+    private int GetTeamScore(Match match, bool isFirstTeam)
     {
-        int firstTeamTotal = match.Scores.Sum(s => s.FirstScore);
-        int secondTeamTotal = match.Scores.Sum(s => s.SecondScore);
-        
-        if (firstTeamTotal > secondTeamTotal)
+        if (isFirstTeam)
         {
-            return match.FirstParticipant;
+            return match.Scores.Sum(s => s.FirstScore);
         }
         else
         {
-            return match.SecondParticipant;
+            return match.Scores.Sum(s => s.SecondScore);
         }
+    }
+    
+    private IParticipant GetMatchResult(Match match, bool isLookingForWinner)
+    {
+        int firstScore = GetTeamScore(match, true);
+        int secondScore = GetTeamScore(match, false);
+
+        if (firstScore > secondScore)
+        {
+            if (isLookingForWinner)
+            {
+                return match.FirstParticipant; 
+            }
+            else
+            {
+                return match.SecondParticipant; 
+            }
+        }
+        else
+        {
+            if (isLookingForWinner)
+            {
+                return match.SecondParticipant;
+            }
+            else
+            {
+                return match.FirstParticipant;
+            }
+        }
+    }
+
+    private IParticipant GetMatchWinner(Match match)
+    {
+        return GetMatchResult(match, true);
+    }
+    
+    private IParticipant GetMatchLoser(Match match)
+    {
+        return GetMatchResult(match, false);
     }
 }
