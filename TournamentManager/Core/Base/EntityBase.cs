@@ -10,12 +10,15 @@ public abstract class EntityBase : IIdentifiable
     {
         if (obj is EntityBase other)
         {
-            return this.Id ==  other.Id;
+            if (this.GetType() != other.GetType())
+            {
+                return false;
+            }
+
+            return this.Id == other.Id;
         }
-        else
-        {
-            return false;
-        }
+    
+        return false;
     }
 
     public override int GetHashCode()

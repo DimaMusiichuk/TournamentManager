@@ -183,4 +183,30 @@ public class ExceptionAndTiebreakerTests
         });
         Assert.That(ex.Message, Is.EqualTo("Вік повинен бути від 13 до 45 років"));
     }
+    
+    [Test]
+    public void GenerateTiebreakers_AllTeamsTiedWithZeroPoints_ShouldGenerateTiebreakers()
+    {
+        var settings = new TournamentSettings { NumberOfGroups = 1 };
+        var groupStage = new GroupStage(settings);
+
+        var groupStandings = new Dictionary<IParticipant, ParticipantStats>
+        {
+            { new Team { Id = 1 }, new ParticipantStats { Points = 0 } },
+            { new Team { Id = 2 }, new ParticipantStats { Points = 0 } }
+        };
+        var allStandings = new Dictionary<string, Dictionary<IParticipant, ParticipantStats>> { { "Група A", groupStandings } };
+        groupStage.GroupMatches.Add("Група A", new List<Match>());
+
+        groupStage.GenerateTiebreakers(allStandings);
+
+        Assert.That(groupStage.TiebreakerMatches.Count, Is.EqualTo(1), "Тайбрейкер має створюватися навіть якщо команди мають по 0 очок");
+    }
+
+    [Test]
+    public void CustomException_DuplicateTeam_ShouldInheritFromException()
+    {
+        var ex = new DuplicateTeamException("test");
+        Assert.That(ex, Is.InstanceOf<System.Exception>(), "Всі кастомні помилки мають наслідувати базовий клас Exception");
+    }
 }

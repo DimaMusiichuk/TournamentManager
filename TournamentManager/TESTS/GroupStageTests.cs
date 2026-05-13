@@ -127,4 +127,72 @@ public class GroupStageTests
 
         Assert.That(standings.Count, Is.EqualTo(0));
     }
+    
+    [Test]
+    public void GroupStage_CalculateStandings_MultipleScoresInOneMatch()
+    {
+        _settings.WinPoint = 3;
+        _groupStage.GroupCreator(_teams, 1);
+        var match = _groupStage.GroupMatches["Група A"][0];
+
+        match.Scores.Add(new Score { FirstScore = 1, SecondScore = 0 });
+        match.Scores.Add(new Score { FirstScore = 0, SecondScore = 1 });
+        match.Scores.Add(new Score { FirstScore = 1, SecondScore = 0 });
+        match.IsCompleted = true;
+
+        var standings = _groupStage.CalculateStandings()["Група A"];
+        var winnerStats = standings.First(t => t.Key == match.FirstParticipant).Value;
+
+        Assert.That(winnerStats.Points, Is.EqualTo(3), "Переможець за сумою карт має отримати очки");
+    }
+    
+    [Test]
+    public void GenerateTiebreakers_ShouldClearPreviousMatches_WhenCalledMultipleTimes()
+    {
+        var groupStandings = new Dictionary<IParticipant, ParticipantStats>
+        {
+            { new Team { Id = 1, Name = "Team A" }, new ParticipantStats { Points = 5 } },
+            { new Team { Id = 2, Name = "Team B" }, new ParticipantStats { Points = 5 } }
+        };
+        var allStandings = new Dictionary<string, Dictionary<IParticipant, ParticipantStats>> { { "Група A", groupStandings } };
+        _groupStage.GroupMatches.Add("Група A", new List<Match>());
+
+        _groupStage.GenerateTiebreakers(allStandings);
+        _groupStage.GenerateTiebreakers(allStandings);
+
+        Assert.That(_groupStage.TiebreakerMatches.Count, Is.EqualTo(1), "Метод має очищати старі тайбрейкери перед генерацією нових");
+    }
+    
+    [Test]
+    public void CalculateStandings_WithIncompleteMatches_ShouldIgnoreThem()
+    {
+        _groupStage.GroupCreator(_teams, 1);
+        var match = _groupStage.GroupMatches["Група A"][0];
+
+        match.Scores.Add(new Score { FirstScore = 2, SecondScore = 0 });
+        match.IsCompleted = false;
+
+        var standings = _groupStage.CalculateStandings()["Група A"];
+        var naviStats = standings.First(t => t.Key.Name == "NAVI").Value;
+
+        Assert.That(naviStats.Points, Is.EqualTo(0), "Незавершені матчі не мають приносити очки в таблицю");
+    }
+
+    [Test]
+    public void GroupCreator_MatchesPerOpponentIsZero_ShouldGenerateZeroMatches()
+    {
+        _settings.MatchesPerOpponent = 0;
+        var matches = _groupStage.GroupCreator(_teams, 1);
+        
+        Assert.That(matches.Count, Is.EqualTo(0), "Якщо в налаштуваннях 0 матчів проти кожного, список має бути порожнім");
+    }
+
+    [Test]
+    public void GroupCreator_OneParticipant_ShouldReturnEmptyMatchList()
+    {
+        var singleTeamList = new List<IParticipant> { new Team { Name = "NaVi" } };
+        var matches = _groupStage.GroupCreator(singleTeamList, 1);
+        
+        Assert.That(matches.Count, Is.EqualTo(0), "Одна команда не може грати сама з собою");
+    }
 }
