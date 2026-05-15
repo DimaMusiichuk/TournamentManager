@@ -10,6 +10,7 @@ public class Tournament : EntityBase, ITournament
     public TournamentSettings Settings { get; set; }
     public IList<IParticipant> Participants { get; set; } = new List<IParticipant>();
     public bool IsStarted { get; set; } = false;
+    public List<Match> AllMatches { get; set; } = new();
     
     public void AddParticipant(IParticipant participant)
     {   

@@ -324,4 +324,94 @@ public class TournamentMatchUI
             score.SecondScore = rnd.Next(0, 2);
         }
     }
+    
+        public void SearchAndFilterMatches(GroupStage groupStage, PlayOff playOff)
+    {
+        Console.Clear();
+        Console.WriteLine("=== ПОШУК ТА ФІЛЬТРАЦІЯ МАТЧІВ ===");
+
+        List<Match> allMatches = new List<Match>();
+    
+        if (groupStage != null && groupStage.GroupMatches != null)
+        {
+            foreach (var group in groupStage.GroupMatches.Values)
+            {
+                allMatches.AddRange(group);
+            }
+        }
+
+        if (playOff != null)
+        {
+            allMatches.AddRange(playOff.UpperMatches);
+            allMatches.AddRange(playOff.LowerMatches);
+        }
+
+        if (allMatches.Count == 0)
+        {
+            Console.WriteLine("Матчів ще немає, згенеруйте групи або плей-оф.");
+            return;
+        }
+
+        Console.Write("Введіть назву команди для пошуку (або натисніть Enter, щоб пропустити): ");
+        string teamQuery = Console.ReadLine();
+
+        if (teamQuery == null)
+        {
+            teamQuery = "";
+        }
+        else
+        {
+            teamQuery = teamQuery.ToLower();
+        }
+
+        Console.WriteLine("\nФільтр за статусом:");
+        Console.WriteLine("1 - Всі матчі");
+        Console.WriteLine("2 - Тільки завершені");
+        Console.WriteLine("3 - Тільки заплановані");
+        string statusChoice = Console.ReadLine()!;
+
+        var filteredMatches = allMatches.AsEnumerable();
+
+        if (!string.IsNullOrWhiteSpace(teamQuery))
+        {
+            filteredMatches = filteredMatches.Where(m => m.FirstParticipant.Name.ToLower().Contains(teamQuery) || m.SecondParticipant.Name.ToLower().Contains(teamQuery));
+        }
+
+        if (statusChoice == "2")
+        {
+            filteredMatches = filteredMatches.Where(m => m.IsCompleted);
+        }
+        else if (statusChoice == "3")
+        {
+            filteredMatches = filteredMatches.Where(m => !m.IsCompleted);
+        }
+
+        var resultList = filteredMatches.ToList();
+
+        Console.WriteLine($"\n--- Знайдено матчів: {resultList.Count} ---");
+        foreach (var match in resultList)
+        {
+            string scoreDisplay;
+            if (match.IsCompleted && match.Scores.Count > 0)
+            {
+                scoreDisplay = $"{match.Scores.Last().FirstScore}:{match.Scores.Last().SecondScore}";
+            }
+            else
+            {
+                scoreDisplay = " VS ";
+            }
+    
+            string statusText;
+            if (match.IsCompleted)
+            {
+                statusText = "Завершено";
+            }
+            else
+            {
+                statusText = "Очікується";
+            }
+    
+            Console.WriteLine($"{statusText} {match.FirstParticipant.Name} {scoreDisplay} {match.SecondParticipant.Name}");
+        }
+    }
 }

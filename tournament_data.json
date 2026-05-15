@@ -20,8 +20,8 @@
   "Participants": [
     {
       "$type": "Team",
-      "Name": "Presidents ",
-      "Coach": "ElonMusk",
+      "Name": "Amaru Gaming",
+      "Coach": "Astarte",
       "Captain": {
         "Age": 18,
         "SecondName": "Trump",
@@ -33,57 +33,57 @@
       },
       "Players": [
         {
-          "Age": 18,
-          "SecondName": "Trump",
-          "Name": "Donald",
+          "Age": 25,
+          "SecondName": "Antonio Rodr\u00EDguez Asto",
+          "Name": "H\u00E9ctor",
           "Team": "Presidents ",
-          "Nickname": "MakeAmericaGreatAgain",
-          "Country": "United States",
+          "Nickname": "K1",
+          "Country": "Peru",
           "Id": 101
         },
         {
-          "Age": 18,
-          "SecondName": "Zelenskiy",
-          "Name": "Volodymyr ",
+          "Age": 20,
+          "SecondName": "Montoya de la Cruz",
+          "Name": "Aldhair",
           "Team": "Presidents ",
-          "Nickname": "ZeleBoba",
-          "Country": "Ukraine",
+          "Nickname": "wonderk1d^^\u003C",
+          "Country": "Peru",
           "Id": 102
         },
         {
-          "Age": 18,
-          "SecondName": "Obama",
-          "Name": "Baraca",
+          "Age": 25,
+          "SecondName": "Cueva Cruz",
+          "Name": "Rodrigo Alonso",
           "Team": "Presidents ",
-          "Nickname": "Black",
-          "Country": "United States",
+          "Nickname": "n1ght",
+          "Country": "Peru",
           "Id": 103
         },
         {
-          "Age": 18,
-          "SecondName": "Lukashenko ",
-          "Name": "Oleksandr ",
+          "Age": 32,
+          "SecondName": "David Chavez Jimenez",
+          "Name": "Oscar",
           "Team": "Presidents ",
-          "Nickname": "MorePotatoes",
-          "Country": "Belarus",
+          "Nickname": "Oscar",
+          "Country": "Bolivia",
           "Id": 104
         },
         {
-          "Age": 18,
-          "SecondName": "Baiden",
-          "Name": "Joe",
+          "Age": 25,
+          "SecondName": "Leonardo Padilla Hernandez",
+          "Name": "Jose",
           "Team": "Presidents ",
-          "Nickname": "Don\u0027t remember ",
-          "Country": "Unites States",
+          "Nickname": "Panda",
+          "Country": "Peru",
           "Id": 105
         }
       ],
-      "TeamCountry": "United States",
+      "TeamCountry": "Peru",
       "Id": 1
     },
     {
       "$type": "Team",
-      "Name": "UkraineSquad",
+      "Name": "Team Lynx",
       "Coach": "Ynaukovich",
       "Captain": {
         "Age": 18,
@@ -96,47 +96,47 @@
       },
       "Players": [
         {
-          "Age": 18,
-          "SecondName": "Lyshko ",
-          "Name": "Oleh",
+          "Age": 22,
+          "SecondName": "Senchinevich",
+          "Name": "Maxim",
           "Team": "UkraineSquad",
-          "Nickname": "Skotinyki",
+          "Nickname": "7jesu",
           "Country": "Ukraine ",
           "Id": 201
         },
         {
-          "Age": 18,
-          "SecondName": "Klichko ",
-          "Name": "Vitaliy ",
+          "Age": 25,
+          "SecondName": "Pnov",
+          "Name": "Maxim",
           "Team": "UkraineSquad",
-          "Nickname": "Boxer",
+          "Nickname": "mellojul",
           "Country": "Ukraine",
           "Id": 202
         },
         {
-          "Age": 18,
-          "SecondName": "Timoshenko",
-          "Name": "Yulya ",
+          "Age": 27,
+          "SecondName": "Dovhal",
+          "Name": "Andrii",
           "Team": "UkraineSquad",
-          "Nickname": "Jail",
+          "Nickname": "VladikTheHtiviy",
           "Country": "Ukraine",
           "Id": 203
         },
         {
-          "Age": 18,
-          "SecondName": "Borisenko",
-          "Name": "Andrey",
+          "Age": 21,
+          "SecondName": "Ivanov",
+          "Name": "Vitaliy",
           "Team": "UkraineSquad",
-          "Nickname": "FreeFromSizo",
+          "Nickname": "QBFY",
           "Country": "Ukraine",
           "Id": 204
         },
         {
-          "Age": 18,
-          "SecondName": "Yatsenuk",
-          "Name": "Arseniy",
+          "Age": 22,
+          "SecondName": "Dolomakin",
+          "Name": "Kostiantyn",
           "Team": "UkraineSquad",
-          "Nickname": "Kulyavlob",
+          "Nickname": "kreker",
           "Country": "Ukraine",
           "Id": 205
         }
@@ -146,60 +146,60 @@
     },
     {
       "$type": "Team",
-      "Name": "KPIUNIVRSITYSQUAD",
-      "Coach": "Sulema",
+      "Name": "KolyteTeam",
+      "Coach": "Ca1k",
       "Captain": {
-        "Age": 18,
-        "SecondName": "Legeza ",
-        "Name": "Viktor",
+        "Age": 19,
+        "SecondName": "Kolotilo",
+        "Name": "Andriy",
         "Team": "KPIUNIVRSITYSQUAD",
-        "Nickname": "Integrali",
+        "Nickname": "Kolyte",
         "Country": "Ukraine",
-        "Id": 305
+        "Id": 304
       },
       "Players": [
         {
           "Age": 18,
-          "SecondName": "Skostyrev",
-          "Name": "Ihor",
+          "SecondName": "Kornienko",
+          "Name": "Egor",
           "Team": "KPIUNIVRSITYSQUAD",
-          "Nickname": "Pokemoni",
+          "Nickname": "Darl1ng",
           "Country": "Ukraine ",
           "Id": 301
         },
         {
           "Age": 18,
-          "SecondName": "Vernik",
-          "Name": "Mykhailo",
+          "SecondName": "Musiichuk",
+          "Name": "Dmytro",
           "Team": "KPIUNIVRSITYSQUAD",
-          "Nickname": "VSOLO",
+          "Nickname": "2",
           "Country": "Ukraine",
           "Id": 302
         },
         {
           "Age": 18,
-          "SecondName": "Neshadim",
-          "Name": "Oleksander",
+          "SecondName": "Polchenko ",
+          "Name": "Mikita ",
           "Team": "KPIUNIVRSITYSQUAD",
-          "Nickname": "Neshad67",
+          "Nickname": "Katana",
           "Country": "Ukraine",
           "Id": 303
         },
         {
-          "Age": 18,
-          "SecondName": "Suschuk-Slusarenko",
-          "Name": "Victoria ",
+          "Age": 19,
+          "SecondName": "Kolotilo",
+          "Name": "Andriy",
           "Team": "KPIUNIVRSITYSQUAD",
-          "Nickname": "Vertolotic",
+          "Nickname": "Kolyte",
           "Country": "Ukraine",
           "Id": 304
         },
         {
-          "Age": 18,
-          "SecondName": "Legeza ",
-          "Name": "Viktor",
+          "Age": 19,
+          "SecondName": "Kolotylo",
+          "Name": "Oleksandr",
           "Team": "KPIUNIVRSITYSQUAD",
-          "Nickname": "Integrali",
+          "Nickname": "SanchoPancho",
           "Country": "Ukraine",
           "Id": 305
         }
@@ -209,65 +209,65 @@
     },
     {
       "$type": "Team",
-      "Name": "EpsteinFileLeaders",
-      "Coach": "Bionce",
+      "Name": "Team Resilience",
+      "Coach": "Super",
       "Captain": {
-        "Age": 18,
-        "SecondName": "Epstein ",
-        "Name": "Jefrey",
+        "Age": 27,
+        "SecondName": "Hao",
+        "Name": "Lin",
         "Team": "EpsteinFileLeaders",
-        "Nickname": "KindUncle",
-        "Country": "United States",
-        "Id": 403
+        "Nickname": "planet",
+        "Country": "China",
+        "Id": 404
       },
       "Players": [
         {
-          "Age": 18,
-          "SecondName": "Diddy",
-          "Name": "Shon",
+          "Age": 26,
+          "SecondName": "Shaohan",
+          "Name": "Yang",
           "Team": "EpsteinFileLeaders",
-          "Nickname": "KidOil",
-          "Country": "United States",
+          "Nickname": "Erika",
+          "Country": "China",
           "Id": 401
         },
         {
-          "Age": 18,
-          "SecondName": "Klinton",
-          "Name": "Bill",
+          "Age": 25,
+          "SecondName": "Ziliang",
+          "Name": "Xu",
           "Team": "EpsteinFileLeaders",
-          "Nickname": "BigDaddy",
-          "Country": "United States",
+          "Nickname": "Echo",
+          "Country": "China",
           "Id": 402
         },
         {
-          "Age": 18,
-          "SecondName": "Epstein ",
-          "Name": "Jefrey",
+          "Age": 25,
+          "SecondName": "Kongbo",
+          "Name": "Li",
           "Team": "EpsteinFileLeaders",
-          "Nickname": "KindUncle",
-          "Country": "United States",
+          "Nickname": "niu",
+          "Country": "China",
           "Id": 403
         },
         {
-          "Age": 18,
-          "SecondName": "Kori-Karter",
-          "Name": "Shon ",
+          "Age": 27,
+          "SecondName": "Hao",
+          "Name": "Lin",
           "Team": "EpsteinFileLeaders",
-          "Nickname": "Jay-Z",
-          "Country": "United States",
+          "Nickname": "planet",
+          "Country": "China",
           "Id": 404
         },
         {
-          "Age": 18,
-          "SecondName": "Poplavskiy",
-          "Name": "Mykhailo",
+          "Age": 28,
+          "SecondName": "Ziqiang",
+          "Name": "Zhang",
           "Team": "EpsteinFileLeaders",
-          "Nickname": "Poplavkiy",
-          "Country": "Ukraine",
+          "Nickname": "zzq",
+          "Country": "China",
           "Id": 405
         }
       ],
-      "TeamCountry": "United States ",
+      "TeamCountry": "China",
       "Id": 4
     },
     {
@@ -980,6 +980,7 @@
     }
   ],
   "IsStarted": false,
+  "AllMatches": [],
   "Matches": [
     {
       "FirstParticipant": {

@@ -211,4 +211,37 @@ public class ModelsAndOOPTests
         Assert.That(settings.Discipline, Is.EqualTo("Dota2"));
         Assert.That(settings.TeamSize, Is.EqualTo(5));
     }
+    
+    [Test]
+    public void Tournament_AddPlayersWithSameNicknameInDifferentTeams_ShouldDetectConflict()
+    {
+        var tournament = new Tournament();
+    
+        var team1 = new Team { Name = "NAVI" };
+        team1.Players.Add(new Player { Id = 1, Nickname = "Niku" });
+        tournament.AddParticipant(team1);
+
+        var team2 = new Team { Name = "Team Falcons" };
+        string attemptedNickname = "Niku";
+
+        bool alreadyExists = false;
+
+        foreach (var participant in tournament.Participants) 
+        {
+            if (participant is Team t) 
+            {
+                foreach (var p in t.Players) 
+                {
+                    if (p.Nickname.ToLower() == attemptedNickname.ToLower()) 
+                    {
+                        alreadyExists = true;
+                        break;
+                    }
+                }
+            }
+            if (alreadyExists) break;
+        }
+
+        Assert.That(alreadyExists, Is.True);
+    }
 }

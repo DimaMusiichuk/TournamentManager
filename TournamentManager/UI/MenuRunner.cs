@@ -15,6 +15,7 @@ public class MenuRunner
     private TournamentSetupUI _setupUI = new TournamentSetupUI();
     private TournamentMatchUI _matchUI = new TournamentMatchUI();
     private TeamEditorUI _teamEditorUI = new TeamEditorUI();
+    private TournamentSettingsUI _settingsUI = new TournamentSettingsUI();
 
     private readonly string[] _menuOptions = new string[]
     {
@@ -32,6 +33,9 @@ public class MenuRunner
         "Завантажити турнір з файлу",
         "Зіграти переігровки груп",
         "Редагувати існуючу команду",
+        "Редагувати параметри турніру",
+        "Видалити турнір",
+        "Пошук та фільтрація матчів",
         "Вихід"
     };
 
@@ -90,6 +94,16 @@ public class MenuRunner
                         _teamEditorUI.EditTeam(_tournament);
                         break;
                     case 14:
+                        _settings = _settingsUI.EditSettings(_settings);
+                        _groupStage = new GroupStage(_settings);
+                        break;
+                    case 15:
+                        DeleteTournament();
+                        break;
+                    case 16:
+                        _matchUI.SearchAndFilterMatches(_groupStage, _playOff);
+                        break;
+                    case 17:
                         Console.WriteLine("Вихід з програми");
                         return; 
                 }
@@ -182,6 +196,9 @@ public class MenuRunner
         {
             _tournament.Settings = _settings;
             
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string fullPath = Path.Combine(baseDir, "tournament_data.json");
+            
             var storage = new FileStorage<Tournament>("tournament_data.json");
             storage.Save(_tournament);
             Console.WriteLine("Дані турніру збережено у файл tournament_data.json");
@@ -199,10 +216,19 @@ public class MenuRunner
             var storage = new FileStorage<Tournament>("tournament_data.json");
             var loadedTournament = storage.Load();
             
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(baseDir, "tournament_data.json");
+            
             if (loadedTournament != null)
             {
                 _tournament = loadedTournament;
                 _settings = _tournament.Settings;
+                
+                if (_settings != null)
+                {
+                    _groupStage = new GroupStage(_settings);
+                    _playOff = new PlayOff(_settings);
+                }
                 
                 Console.WriteLine("Дані турніру завантажено");
                 Console.WriteLine($"Кількість команд у турнірі: {_tournament.Participants.Count}");
@@ -215,6 +241,41 @@ public class MenuRunner
         catch (Exception ex)
         {
             Console.WriteLine($"Помилка при завантаженні: {ex.Message}");
+        }
+    }
+    
+    private void DeleteTournament()
+    {
+        Console.Clear();
+        Console.WriteLine("=== ВИДАЛЕННЯ ТУРНІРУ ===");
+        Console.WriteLine("Це очистить всі дані турніру з пам'яті та файлу");
+        Console.Write("Ви впевнені? (y/n): ");
+
+        if (Console.ReadLine()?.ToLower() == "y")
+        {
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(baseDir, "tournament_data.json");
+            string backupPath = Path.Combine(baseDir, $"tournament_backup_{DateTime.Now:yyyyMMdd_HHmmss}.json");
+
+            if (File.Exists(filePath))
+            {
+                File.Copy(filePath, backupPath); 
+                File.Delete(filePath);
+            
+                Console.WriteLine($"\n файл видалено.");
+                Console.WriteLine($"Історія збережена у файл: {Path.GetFileName(backupPath)} 😉");
+            }
+
+            _tournament = new Tournament();
+            _settings = null;
+            _groupStage = null;
+            _playOff = null;
+
+            Console.WriteLine("\nТурнір видалено з системи");
+        }
+        else
+        {
+            Console.WriteLine("\nВидалення скасовано");
         }
     }
 }

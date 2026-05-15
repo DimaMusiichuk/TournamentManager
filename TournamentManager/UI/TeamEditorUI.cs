@@ -1,4 +1,5 @@
 ﻿using TournemantManager.Core.Models;
+using System.Linq;
 
 namespace TournemantManager.UI;
 
@@ -52,11 +53,72 @@ public class TeamEditorUI
         Console.Write("\nХочете відредагувати гравців цієї команди? (1 - Так, 0 - Ні): ");
         if (Console.ReadLine() == "1")
         {
-            EditTeamPlayers(teamToEdit);
+            EditTeamPlayers(teamToEdit, tournament);
+        }
+        
+        string currentCoach;
+        if (string.IsNullOrEmpty(teamToEdit.Coach))
+        {
+            currentCoach = "Немає";
+        }
+        else
+        {
+            currentCoach = teamToEdit.Coach;
+        }
+
+        Console.Write($"\nНовий тренер команди (зараз '{currentCoach}'). Введіть ім'я або натисніть Enter, щоб залишити: ");
+        string newCoach = Console.ReadLine();
+        
+        if (!string.IsNullOrWhiteSpace(newCoach))
+        {
+            teamToEdit.Coach = newCoach;
+            Console.WriteLine("Тренера оновлено");
+        }
+
+        string currentCaptain;
+        if (teamToEdit.Captain != null)
+        {
+            currentCaptain = teamToEdit.Captain.Nickname;
+        }
+        else
+        {
+            currentCaptain = "Не призначено";
+        }
+
+        Console.WriteLine($"\nПоточний капітан: {currentCaptain}");
+        Console.Write("Хочете змінити капітана? (1 - Так, 0 - Ні): ");
+        
+        if (Console.ReadLine() == "1")
+        {
+            Console.WriteLine("\nХто з гравців тепер буде капітаном?");
+            for (int i = 0; i < teamToEdit.Players.Count; i++)
+            {
+                Console.WriteLine($"{i + 1} - {teamToEdit.Players[i].Nickname}");
+            }
+            
+            Console.Write("Оберіть номер нового капітана: ");
+            string captChoice = Console.ReadLine();
+            
+            if (int.TryParse(captChoice, out int captIndex))
+            {
+                if (captIndex > 0 && captIndex <= teamToEdit.Players.Count)
+                {
+                    teamToEdit.Captain = teamToEdit.Players[captIndex - 1];
+                    Console.WriteLine($"Капітаном успішно призначено: {teamToEdit.Captain.Nickname} 👑");
+                }
+                else
+                {
+                    Console.WriteLine("Помилка: гравця з таким номером немає капітан не змінився.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Помилка: потрібно ввести число капітан не змінився.");
+            }
         }
     }
 
-    private void EditTeamPlayers(Team team)
+    private void EditTeamPlayers(Team team, Tournament tournament)
     {
         while (true)
         {
@@ -80,9 +142,31 @@ public class TeamEditorUI
                 
                 Console.Write($"Новий нікнейм (зараз '{playerToEdit.Nickname}'). Введіть новий або натисніть Enter: ");
                 string newNick = Console.ReadLine()!;
+                
                 if (!string.IsNullOrWhiteSpace(newNick))
                 {
-                    playerToEdit.Nickname = newNick;
+                    bool isTaken = false;
+                    foreach (var participant in tournament.Participants)
+                    {
+                        if (participant is Team otherTeam)
+                        {
+                            if (otherTeam.Players.Any(p => p.Nickname.Equals(newNick, StringComparison.OrdinalIgnoreCase) && p.Id != playerToEdit.Id))
+                            {
+                                isTaken = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (isTaken)
+                    {
+                        Console.WriteLine("Помилка: цей нікнейм уже зайнятий іншим гравцем у турнірі!");
+                    }
+                    else
+                    {
+                        playerToEdit.Nickname = newNick;
+                        Console.WriteLine("Нікнейм оновлено.");
+                    }
                 }
                 
                 Console.Write($"Нове ім'я (зараз '{playerToEdit.Name}'). Введіть нове або натисніть Enter: ");
@@ -109,7 +193,7 @@ public class TeamEditorUI
                     }
                     else
                     {
-                        Console.WriteLine("Вік має бути числом.");
+                        Console.WriteLine("Вік має бути числом");
                     }
                 }
 

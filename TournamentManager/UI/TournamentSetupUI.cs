@@ -104,7 +104,7 @@ public class TournamentSetupUI
             {
                 Console.WriteLine($"\nГравець {i + 1} з {settings.TeamSize}:");
                 Console.Write("Нікнейм: ");
-                string nickname = Console.ReadLine()!;
+                string nickname = GetValidNickname(tournament);
                 string firstName = GetValidFirstName();
                 string secondName = GetValidSecondName();
                 int age = GetValidAge();
@@ -233,6 +233,42 @@ public class TournamentSetupUI
             {
                 Console.WriteLine($"- [{player.Nickname}] {player.Name} {player.SecondName}, {player.Age} років, {player.Country}");
             }
+        }
+    }
+    
+    private string GetValidNickname(Tournament tournament)
+    {
+        while (true)
+        {
+            Console.Write("Нікнейм: ");
+            string nickname = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(nickname))
+            {
+                Console.WriteLine("Нікнейм не може бути порожнім");
+                continue;
+            }
+
+            bool isGlobalDuplicate = false;
+            foreach (var participant in tournament.Participants)
+            {
+                if (participant is Team team)
+                {
+                    if (team.Players.Any(p => p.Nickname.Equals(nickname, StringComparison.OrdinalIgnoreCase)))
+                    {
+                        isGlobalDuplicate = true;
+                        break;
+                    }
+                }
+            }
+
+            if (isGlobalDuplicate)
+            {
+                Console.WriteLine($"Гравець з нікнеймом '{nickname}' вже записаний");
+                continue;
+            }
+
+            return nickname;
         }
     }
 
