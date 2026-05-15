@@ -181,35 +181,147 @@ public class TournamentMatchUI
     }
 
     private void EnterManualScore(Match match, Score score, int format)
+{
+    Console.WriteLine($"\nМатч: {match.FirstParticipant.Name} VS {match.SecondParticipant.Name}");
+    Console.WriteLine($"Формат матчу: BO{format}");
+
+    int winnerChoice = GetWinnerChoice(match, format);
+    int mapsPlayed = 0;
+
+    if (format == 1)
+    {
+        mapsPlayed = ProcessBo1Score(score, winnerChoice);
+    }
+    else if (format == 2)
+    {
+        mapsPlayed = ProcessBo2Score(score, winnerChoice);
+    }
+    else
+    {
+        mapsPlayed = ProcessBestOfSeriesScore(score, winnerChoice, format);
+    }
+
+    Console.WriteLine($"\nРахунок по картах: {score.FirstScore}:{score.SecondScore}");
+
+    CollectMapStatistics(match, mapsPlayed);
+}
+
+
+    private int GetWinnerChoice(Match match, int format)
     {
         while (true)
         {
-            Console.WriteLine($"\nМатч: {match.FirstParticipant.Name} VS {match.SecondParticipant.Name}");
-            Console.Write($"Рахунок команди {match.FirstParticipant.Name}: ");
-            score.FirstScore = int.Parse(Console.ReadLine()!);
-            Console.Write($"Рахунок команди {match.SecondParticipant.Name}: ");
-            score.SecondScore = int.Parse(Console.ReadLine()!);
+            Console.WriteLine("\nХто переміг у цій серії?");
+            Console.WriteLine($"1 - {match.FirstParticipant.Name}");
+            Console.WriteLine($"2 - {match.SecondParticipant.Name}");
+            if (format == 2) Console.WriteLine("3 - Нічия (Тільки для Bo2)");
+            Console.Write("Ваш вибір: ");
 
-            if (format == 2 || score.FirstScore != score.SecondScore) 
+            if (int.TryParse(Console.ReadLine(), out int choice) && (choice == 1 || choice == 2 || (format == 2 && choice == 3)))
             {
-                break; 
+                return choice;
             }
-            
-            Console.WriteLine("Помилка, в форматі матчів BO1, BO3, BO5 нічия не можлива спробуйте ще раз");
+            Console.WriteLine("Помилка: оберіть правильний варіант.");
+        }
+    }
+
+    private int ProcessBo1Score(Score score, int winnerChoice)
+    {
+    if (winnerChoice == 1)
+    {
+        score.FirstScore = 1;
+        score.SecondScore = 0;
+    }
+    else
+    {
+        score.FirstScore = 0;
+        score.SecondScore = 1;
+    }
+    
+    return 1;
+    }
+
+    private int ProcessBo2Score(Score score, int winnerChoice)
+    {
+        if (winnerChoice == 3)
+        {
+            score.FirstScore = 1; 
+            score.SecondScore = 1; 
+        } 
+        else if (winnerChoice == 1)
+        {
+            score.FirstScore = 2;
+            score.SecondScore = 0;
+        }
+        else
+        {
+            score.FirstScore = 0;
+            score.SecondScore = 2;
+        }
+    
+        return 2;
+    }
+
+    private int ProcessBestOfSeriesScore(Score score, int winnerChoice, int format)
+    {
+        int maxWinsNeeded;
+        if (format == 3)
+        {
+            maxWinsNeeded = 2;
+        }
+        else
+        {
+            maxWinsNeeded = 3;
+        }
+    
+        Console.Write($"\nСкільки карт змогла виграти команда, що програла? (Від 0 до {maxWinsNeeded - 1}): ");
+        int loserScore = int.Parse(Console.ReadLine()!); 
+        
+        if (winnerChoice == 1)
+        {
+            score.FirstScore = maxWinsNeeded;
+            score.SecondScore = loserScore;
+        }
+        else
+        {
+            score.FirstScore = loserScore;
+            score.SecondScore = maxWinsNeeded;
+        }
+    
+        return maxWinsNeeded + loserScore;
+    }
+
+    private void CollectMapStatistics(Match match, int mapsPlayed)
+    {
+    Console.WriteLine($"\n--- Детальна статистика за {mapsPlayed} зіграних мап ---");
+        for (int i = 1; i <= mapsPlayed; i++)
+        {
+            Console.WriteLine($"\nМапа {i}:");
+            Console.Write($"Статистика команди [{match.FirstParticipant.Name}]: ");
+            string stats1 = Console.ReadLine()!;
+        
+            Console.Write($"Статистика команди [{match.SecondParticipant.Name}]: ");
+            string stats2 = Console.ReadLine()!;
+        
+            Console.WriteLine($"=> Результат Мапи {i} збережено: {stats1} : {stats2}");
         }
     }
 
     private void GenerateAutoScore(Match match, Score score, Random rnd, int format)
     {
-        score.FirstScore = rnd.Next(0, 6);
-        score.SecondScore = rnd.Next(0, 6);
-        
-        if (format != 2)
+        score.FirstScore = rnd.Next(0, format + 1);
+        score.SecondScore = rnd.Next(0, format + 1);
+
+        if (format == 1 && score.FirstScore == score.SecondScore)
         {
-            while (score.FirstScore == score.SecondScore)
-            {
-                score.SecondScore = rnd.Next(0, 6);
-            }
+            score.FirstScore = 1;
+            score.SecondScore = 0;
+        }
+
+        if (format == 3 && score.FirstScore == score.SecondScore)
+        {
+            score.FirstScore = 2;
+            score.SecondScore = rnd.Next(0, 2);
         }
     }
 }

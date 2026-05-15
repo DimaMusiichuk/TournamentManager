@@ -9,30 +9,40 @@ public class TournamentSetupUI
     {
         Console.WriteLine("\n--- Налаштування турніру ---");
         var settings = new TournamentSettings();
-        
+
         Console.Write("Введіть кіберспортивну дисципліну (наприклад, Dota 2, CS2): ");
         settings.Discipline = Console.ReadLine()!;
-        
+
         Console.Write("Введіть назву турніру: ");
         settings.TournamentName = Console.ReadLine()!;
 
         Console.Write("Введіть кількість команд для турніру (наприклад: 8, 12, 16): ");
         settings.TotalTeams = int.Parse(Console.ReadLine()!);
-        
+
         Console.Write("Скільки гравців має бути в одній команді? (наприклад: 5): ");
         settings.TeamSize = int.Parse(Console.ReadLine()!);
-        
+
         Console.Write("Формат матчів у групі (1 - Bo1, 2 - Bo2, 3 - Bo3): ");
         settings.MatchesPerOpponent = int.Parse(Console.ReadLine()!);
 
-        Console.Write("Введіть кількість очок за перемогу (рекомендовано 2): ");
-        settings.WinPoint = int.Parse(Console.ReadLine()!);
+        while (true)
+        {
+            Console.Write("Введіть кількість очок за перемогу (рекомендовано 2): ");
+            settings.WinPoint = int.Parse(Console.ReadLine()!);
 
-        Console.Write("Введіть кількість очок за нічию (рекомендовано 1): ");
-        settings.DrawPoint = int.Parse(Console.ReadLine()!);
+            Console.Write("Введіть кількість очок за нічию (рекомендовано 1): ");
+            settings.DrawPoint = int.Parse(Console.ReadLine()!);
 
-        Console.Write("Введіть кількість очок за поразку (рекомендовано 0): ");
-        settings.LosePoint = int.Parse(Console.ReadLine()!);
+            Console.Write("Введіть кількість очок за поразку (рекомендовано 0): ");
+            settings.LosePoint = int.Parse(Console.ReadLine()!);
+
+            if (settings.WinPoint > settings.DrawPoint && settings.DrawPoint >= settings.LosePoint)
+            {
+                break;
+            }
+
+            Console.WriteLine("Помилка: очки за перемогу повинні бути більші за нічию, а нічия більша або рівна поразці");
+        }
 
         Console.Write("Введіть кількість груп (наприклад: 1, 2, 4): ");
         settings.NumberOfGroups = int.Parse(Console.ReadLine()!);
@@ -45,7 +55,7 @@ public class TournamentSetupUI
 
         if (settings.HasLowerBracket)
         {
-            Console.Write("Скільки команд виходять у НИЖНЮ сітку Плей-оф?: ");
+            Console.Write("Скільки команд виходять у нижню сітку Плей-оф?: ");
             settings.LowerBracketSlots = int.Parse(Console.ReadLine()!);
         }
 
@@ -120,19 +130,78 @@ public class TournamentSetupUI
                 newTeam.Coach = Console.ReadLine()!;
             }
             
-            Console.WriteLine("\nХто з гравців є капітаном?");
-            for (int i = 0; i < newTeam.Players.Count; i++)
+            Console.WriteLine("\nЧи є у команди капітан? (1 - Так, 0 - Ні): ");
+            if (Console.ReadLine() == "1")
             {
-                Console.WriteLine($"{i + 1} - {newTeam.Players[i].Nickname}");
+                Console.WriteLine("\nХто з гравців є капітаном?");
+                for (int i = 0; i < newTeam.Players.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1} - {newTeam.Players[i].Nickname}");
+                }
+                
+                Console.Write("Оберіть номер капітана: ");
+                int captIndex = int.Parse(Console.ReadLine()!) - 1;
+                newTeam.Captain = newTeam.Players[captIndex];
             }
-            
-            Console.Write("Оберіть номер капітана: ");
-            int captIndex = int.Parse(Console.ReadLine()!) - 1;
-            newTeam.Captain = newTeam.Players[captIndex];
 
             tournament.AddParticipant(newTeam);
             Console.WriteLine($"\nКоманду '{teamName}' збережено, гравців у складі: {newTeam.Players.Count}");
             Console.WriteLine($"Всього команд у турнірі: {tournament.Participants.Count}");
+        }
+    }
+    
+        public void HandleRemoveParticipant(Tournament tournament)
+    {
+        if (tournament.Participants == null || tournament.Participants.Count == 0)
+        {
+            Console.WriteLine("\nСписок учасників порожній, немає кого видаляти");
+            return;
+        }
+
+        Console.WriteLine("\n--- Список учасників ---");
+        for (int i = 0; i < tournament.Participants.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {tournament.Participants[i].Name}"); 
+        }
+
+        Console.Write("\nВведіть номер команди для видалення (або 0 для відміни): ");
+    
+        string input = Console.ReadLine();
+    
+        if (int.TryParse(input, out int selectedIndex))
+        {
+            if (selectedIndex == 0) 
+            {
+                Console.WriteLine("Відміна операції");
+                return;
+            }
+
+            if (selectedIndex > 0 && selectedIndex <= tournament.Participants.Count)
+            {
+                var participantToRemove = tournament.Participants[selectedIndex - 1];
+
+                try
+                {
+                    tournament.RemoveParticipant(participantToRemove);
+                    Console.WriteLine($"\nКоманду '{participantToRemove.Name}' видалено");
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine($"\nПомилка Логіки {ex.Message}");
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"\nПомилка Даних {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nПомилка: Команди з таким номером не існує");
+            }
+        }
+        else
+        {
+            Console.WriteLine("\nПомилка: Будь ласка, введіть коректне число");
         }
     }
 
@@ -148,7 +217,11 @@ public class TournamentSetupUI
         foreach (Team team in tournament.Participants)
         {
             Console.WriteLine($"\nКоманда: {team.Name} [{team.TeamCountry}] (ID: {team.Id})");
-            Console.WriteLine($"Капітан: {team.Captain.Nickname}👑");
+            
+            if (team.Captain != null)
+            {
+                Console.WriteLine($"Капітан: {team.Captain.Nickname}👑");
+            }
             
             if (!string.IsNullOrEmpty(team.Coach))
             {

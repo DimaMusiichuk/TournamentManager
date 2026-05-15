@@ -12,6 +12,7 @@ public class PlayOff
     public List<Match> UpperMatches { get; set; } = new();
     public List<Match> LowerMatches { get; set; } = new();
     public IParticipant TournamentWinner { get; private set; }
+    public IParticipant UpperBracketWinner { get; private set; }
     public bool IsFinished { get; private set; } = false;
 
     public PlayOff(TournamentSettings settings)
@@ -23,6 +24,21 @@ public class PlayOff
     {
         List<IParticipant> upperBracketTeams = new();
         List<IParticipant> lowerBracketTeams = new();
+        
+        if (_settings.UpperBracketSlots <= 0)
+        {
+            return; 
+        }
+        
+        if (groupStandings == null || groupStandings.Count == 0)
+        {
+            return;
+        }
+        
+        if (_settings.NumberOfGroups <= 0)
+        {
+            _settings.NumberOfGroups = groupStandings.Count;
+        }
 
         foreach (var group in groupStandings)
         {
@@ -41,13 +57,21 @@ public class PlayOff
     {
         List<IParticipant> teamsInGroup = new List<IParticipant>(standings.Keys);
 
+        int upperPerGroup = _settings.UpperBracketSlots / _settings.NumberOfGroups;
+        
+        int lowerPerGroup = 0;
+        if (_settings.HasLowerBracket)
+        {
+            lowerPerGroup = _settings.LowerBracketSlots / _settings.NumberOfGroups;
+        }
+
         for (int i = 0; i < teamsInGroup.Count; i++)
         {
-            if (i < _settings.UpperBracketSlots)
+            if (i < upperPerGroup)
             {
                 upper.Add(teamsInGroup[i]);
             }
-            else if (_settings.HasLowerBracket && i < (_settings.UpperBracketSlots + _settings.LowerBracketSlots))
+            else if (_settings.HasLowerBracket && i < (upperPerGroup + lowerPerGroup))
             {
                 lower.Add(teamsInGroup[i]);
             }
@@ -128,9 +152,15 @@ public class PlayOff
     
     private void ProcessUpperBracket(List<IParticipant> upperWinners, List<IParticipant> upperLosers)
     {
+        if (UpperMatches.Count == 0) 
+        {
+            return;
+        }
+
         foreach (var match in UpperMatches)
         {
             upperWinners.Add(GetMatchWinner(match));
+            
             if (_settings.HasLowerBracket)
             {
                 upperLosers.Add(GetMatchLoser(match));
@@ -141,11 +171,19 @@ public class PlayOff
         {
             GenerateNextRound(upperWinners, UpperMatches);
         }
-        else if (upperWinners.Count == 1 && !_settings.HasLowerBracket)
+        else if (upperWinners.Count == 1)
         {
-            TournamentWinner = upperWinners[0];
-            IsFinished = true;
-            UpperMatches.Clear();
+            if (!_settings.HasLowerBracket)
+            {
+                TournamentWinner = upperWinners[0];
+                IsFinished = true;
+            }
+            else
+            {
+                UpperBracketWinner = upperWinners[0];
+            }
+            
+            UpperMatches.Clear(); 
         }
     }
     
@@ -165,16 +203,17 @@ public class PlayOff
         
         nextLowerParticipants.AddRange(upperLosers);
 
-        if (upperWinners.Count == 1 && nextLowerParticipants.Count == 1)
+        if (UpperBracketWinner != null && nextLowerParticipants.Count == 1)
         {
-            UpperMatches.Clear();
             LowerMatches.Clear();
             
             var grandFinal = new Match();
-            grandFinal.FirstParticipant = upperWinners[0];
+            grandFinal.FirstParticipant = UpperBracketWinner;
             grandFinal.SecondParticipant = nextLowerParticipants[0];
             
             UpperMatches.Add(grandFinal);
+            
+            UpperBracketWinner = null;    
         }
         else if (nextLowerParticipants.Count > 1)
         {

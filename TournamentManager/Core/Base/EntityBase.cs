@@ -18,7 +18,7 @@ public abstract class EntityBase : IIdentifiable
             return this.Id == other.Id;
         }
     
-        return false;
+        return false;   
     }
 
     public override int GetHashCode()

@@ -7,7 +7,10 @@ public class Tournament : EntityBase, ITournament
 {
     public string Title { get; set; }
     public string Description { get; set; }
+    public TournamentSettings Settings { get; set; }
     public IList<IParticipant> Participants { get; set; } = new List<IParticipant>();
+    public bool IsStarted { get; set; } = false;
+    
     public void AddParticipant(IParticipant participant)
     {   
         Participants.Add(participant);
@@ -15,7 +18,15 @@ public class Tournament : EntityBase, ITournament
 
     public void RemoveParticipant(IParticipant participant)
     {
-        Participants.Remove(participant);
+        if (this.IsStarted) 
+        {
+            throw new InvalidOperationException("Неможливо видалити учасника: турнір вже розпочався");
+        }
+
+        if (!Participants.Remove(participant))
+        {
+            throw new ArgumentException("Учасника не знайдено у списку");
+        }
     }
 
     public IList<Match> Matches { get; set; } =  new List<Match>();

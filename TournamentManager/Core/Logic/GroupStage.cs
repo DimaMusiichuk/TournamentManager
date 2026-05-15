@@ -60,7 +60,7 @@ public class GroupStage
             var match = new Match();
             match.FirstParticipant = first;
             match.SecondParticipant = second;
-            
+    
             GroupMatches[groupName].Add(match);
             allMatches.Add(match);
         }
@@ -68,7 +68,7 @@ public class GroupStage
 
     public Dictionary<string, Dictionary<IParticipant, ParticipantStats>> CalculateStandings()
     {
-       var allStandings = new Dictionary<string, Dictionary<IParticipant, ParticipantStats>>();
+        var allStandings = new Dictionary<string, Dictionary<IParticipant, ParticipantStats>>();
 
         foreach (var groupPair in GroupMatches)
         {
@@ -99,7 +99,8 @@ public class GroupStage
             }
 
             var list = groupStandings.ToList();
-            list.Sort((team1, team2) => team2.Value.Points.CompareTo(team1.Value.Points));
+            
+            list.Sort(CompareTeams);
             
             var sortedStandings = new Dictionary<IParticipant, ParticipantStats>();
             foreach (var team in list)
@@ -111,6 +112,56 @@ public class GroupStage
         }
         
         return allStandings;
+    }
+    
+    private int CompareTeams(KeyValuePair<IParticipant, ParticipantStats> team1, KeyValuePair<IParticipant, ParticipantStats> team2)
+    {
+        int pointsComparison = team2.Value.Points.CompareTo(team1.Value.Points);
+        
+        if (pointsComparison != 0) 
+        {
+            return pointsComparison;
+        }
+
+        Match tiebreaker = null;
+        
+        foreach (var m in TiebreakerMatches)
+        {
+            if (m.IsCompleted)
+            {
+                if (m.FirstParticipant.Equals(team1.Key) && m.SecondParticipant.Equals(team2.Key))
+                {
+                    tiebreaker = m;
+                    break;
+                }
+                else if (m.FirstParticipant.Equals(team2.Key) && m.SecondParticipant.Equals(team1.Key))
+                {
+                    tiebreaker = m;
+                    break;
+                }
+            }
+        }
+
+        if (tiebreaker != null)
+        {
+            int t1Score = 0;
+            int t2Score = 0;
+
+            if (tiebreaker.FirstParticipant.Equals(team1.Key))
+            {
+                t1Score = tiebreaker.Scores.Sum(s => s.FirstScore);
+                t2Score = tiebreaker.Scores.Sum(s => s.SecondScore);
+            }
+            else
+            {
+                t1Score = tiebreaker.Scores.Sum(s => s.SecondScore);
+                t2Score = tiebreaker.Scores.Sum(s => s.FirstScore);
+            }
+
+            return t2Score.CompareTo(t1Score);
+        }
+
+        return 0; 
     }
 
     private void UpdateStatsForCompletedMatch(Match match, Dictionary<IParticipant, ParticipantStats> groupStandings)
@@ -140,7 +191,7 @@ public class GroupStage
             groupStandings[match.SecondParticipant].Draws++;
         }
     }
-    
+
     public void GenerateTiebreakers(Dictionary<string, Dictionary<IParticipant, ParticipantStats>> currentStandings)
     {
         TiebreakerMatches.Clear();
@@ -157,10 +208,8 @@ public class GroupStage
                     var match = new Match();
                     match.FirstParticipant = teams[i].Key;
                     match.SecondParticipant = teams[i + 1].Key;
-                    
+
                     TiebreakerMatches.Add(match);
-                    
-                    GroupMatches[groupName].Add(match); 
                 }
             }
         }

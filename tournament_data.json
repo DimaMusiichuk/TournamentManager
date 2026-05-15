@@ -1,0 +1,7034 @@
+{
+  "Title": null,
+  "Description": null,
+  "Settings": {
+    "WinPoint": 2,
+    "LosePoint": 0,
+    "NumberOfGroups": 4,
+    "Format": 0,
+    "UpperBracketSlots": 8,
+    "LowerBracketSlots": 4,
+    "DrawPoint": 1,
+    "HasLowerBracket": true,
+    "AdvancingTeamsPerGroup": 0,
+    "TotalTeams": 16,
+    "TeamSize": 5,
+    "MatchesPerOpponent": 2,
+    "TournamentName": "Epstein island summer cup 2026",
+    "Discipline": "Dota 2"
+  },
+  "Participants": [
+    {
+      "$type": "Team",
+      "Name": "Presidents ",
+      "Coach": "ElonMusk",
+      "Captain": {
+        "Age": 18,
+        "SecondName": "Trump",
+        "Name": "Donald",
+        "Team": "Presidents ",
+        "Nickname": "MakeAmericaGreatAgain",
+        "Country": "United States",
+        "Id": 101
+      },
+      "Players": [
+        {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        {
+          "Age": 18,
+          "SecondName": "Zelenskiy",
+          "Name": "Volodymyr ",
+          "Team": "Presidents ",
+          "Nickname": "ZeleBoba",
+          "Country": "Ukraine",
+          "Id": 102
+        },
+        {
+          "Age": 18,
+          "SecondName": "Obama",
+          "Name": "Baraca",
+          "Team": "Presidents ",
+          "Nickname": "Black",
+          "Country": "United States",
+          "Id": 103
+        },
+        {
+          "Age": 18,
+          "SecondName": "Lukashenko ",
+          "Name": "Oleksandr ",
+          "Team": "Presidents ",
+          "Nickname": "MorePotatoes",
+          "Country": "Belarus",
+          "Id": 104
+        },
+        {
+          "Age": 18,
+          "SecondName": "Baiden",
+          "Name": "Joe",
+          "Team": "Presidents ",
+          "Nickname": "Don\u0027t remember ",
+          "Country": "Unites States",
+          "Id": 105
+        }
+      ],
+      "TeamCountry": "United States",
+      "Id": 1
+    },
+    {
+      "$type": "Team",
+      "Name": "UkraineSquad",
+      "Coach": "Ynaukovich",
+      "Captain": {
+        "Age": 18,
+        "SecondName": "Yatsenuk",
+        "Name": "Arseniy",
+        "Team": "UkraineSquad",
+        "Nickname": "Kulyavlob",
+        "Country": "Ukraine",
+        "Id": 205
+      },
+      "Players": [
+        {
+          "Age": 18,
+          "SecondName": "Lyshko ",
+          "Name": "Oleh",
+          "Team": "UkraineSquad",
+          "Nickname": "Skotinyki",
+          "Country": "Ukraine ",
+          "Id": 201
+        },
+        {
+          "Age": 18,
+          "SecondName": "Klichko ",
+          "Name": "Vitaliy ",
+          "Team": "UkraineSquad",
+          "Nickname": "Boxer",
+          "Country": "Ukraine",
+          "Id": 202
+        },
+        {
+          "Age": 18,
+          "SecondName": "Timoshenko",
+          "Name": "Yulya ",
+          "Team": "UkraineSquad",
+          "Nickname": "Jail",
+          "Country": "Ukraine",
+          "Id": 203
+        },
+        {
+          "Age": 18,
+          "SecondName": "Borisenko",
+          "Name": "Andrey",
+          "Team": "UkraineSquad",
+          "Nickname": "FreeFromSizo",
+          "Country": "Ukraine",
+          "Id": 204
+        },
+        {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        }
+      ],
+      "TeamCountry": "Ukraine",
+      "Id": 2
+    },
+    {
+      "$type": "Team",
+      "Name": "KPIUNIVRSITYSQUAD",
+      "Coach": "Sulema",
+      "Captain": {
+        "Age": 18,
+        "SecondName": "Legeza ",
+        "Name": "Viktor",
+        "Team": "KPIUNIVRSITYSQUAD",
+        "Nickname": "Integrali",
+        "Country": "Ukraine",
+        "Id": 305
+      },
+      "Players": [
+        {
+          "Age": 18,
+          "SecondName": "Skostyrev",
+          "Name": "Ihor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Pokemoni",
+          "Country": "Ukraine ",
+          "Id": 301
+        },
+        {
+          "Age": 18,
+          "SecondName": "Vernik",
+          "Name": "Mykhailo",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "VSOLO",
+          "Country": "Ukraine",
+          "Id": 302
+        },
+        {
+          "Age": 18,
+          "SecondName": "Neshadim",
+          "Name": "Oleksander",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Neshad67",
+          "Country": "Ukraine",
+          "Id": 303
+        },
+        {
+          "Age": 18,
+          "SecondName": "Suschuk-Slusarenko",
+          "Name": "Victoria ",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Vertolotic",
+          "Country": "Ukraine",
+          "Id": 304
+        },
+        {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        }
+      ],
+      "TeamCountry": "Ukraine",
+      "Id": 3
+    },
+    {
+      "$type": "Team",
+      "Name": "EpsteinFileLeaders",
+      "Coach": "Bionce",
+      "Captain": {
+        "Age": 18,
+        "SecondName": "Epstein ",
+        "Name": "Jefrey",
+        "Team": "EpsteinFileLeaders",
+        "Nickname": "KindUncle",
+        "Country": "United States",
+        "Id": 403
+      },
+      "Players": [
+        {
+          "Age": 18,
+          "SecondName": "Diddy",
+          "Name": "Shon",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KidOil",
+          "Country": "United States",
+          "Id": 401
+        },
+        {
+          "Age": 18,
+          "SecondName": "Klinton",
+          "Name": "Bill",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "BigDaddy",
+          "Country": "United States",
+          "Id": 402
+        },
+        {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        {
+          "Age": 18,
+          "SecondName": "Kori-Karter",
+          "Name": "Shon ",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "Jay-Z",
+          "Country": "United States",
+          "Id": 404
+        },
+        {
+          "Age": 18,
+          "SecondName": "Poplavskiy",
+          "Name": "Mykhailo",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "Poplavkiy",
+          "Country": "Ukraine",
+          "Id": 405
+        }
+      ],
+      "TeamCountry": "United States ",
+      "Id": 4
+    },
+    {
+      "$type": "Team",
+      "Name": "NaVi",
+      "Coach": "Cy-",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 21,
+          "SecondName": "Linnikov",
+          "Name": "Taras",
+          "Team": "NaVi",
+          "Nickname": "gotthejuice",
+          "Country": "Ukraine",
+          "Id": 501
+        },
+        {
+          "Age": 17,
+          "SecondName": "Bachkur",
+          "Name": "Artem",
+          "Team": "NaVi",
+          "Nickname": "Niku",
+          "Country": "Ukraine",
+          "Id": 502
+        },
+        {
+          "Age": 20,
+          "SecondName": "Prots",
+          "Name": "Yurii",
+          "Team": "NaVi",
+          "Nickname": "pna",
+          "Country": "Ukraine",
+          "Id": 503
+        },
+        {
+          "Age": 20,
+          "SecondName": "Tokpanov",
+          "Name": "Tamir",
+          "Team": "NaVi",
+          "Nickname": "daze",
+          "Country": "Ukraine",
+          "Id": 504
+        },
+        {
+          "Age": 20,
+          "SecondName": "Mitroshkyn",
+          "Name": "Stanislav",
+          "Team": "NaVi",
+          "Nickname": "Riddys",
+          "Country": "Ukraine",
+          "Id": 505
+        }
+      ],
+      "TeamCountry": "Ukraine",
+      "Id": 5
+    },
+    {
+      "$type": "Team",
+      "Name": "GamerLegion",
+      "Coach": "Mangusu",
+      "Captain": {
+        "Age": 31,
+        "SecondName": "Shekhovtsov",
+        "Name": "Danil",
+        "Team": "GamerLegion",
+        "Nickname": "Bignum",
+        "Country": "Ukraine",
+        "Id": 604
+      },
+      "Players": [
+        {
+          "Age": 28,
+          "SecondName": "Kok Hong",
+          "Name": "Daniel Chan",
+          "Team": "GamerLegion",
+          "Nickname": "Ghost",
+          "Country": "Malaysia",
+          "Id": 601
+        },
+        {
+          "Age": 19,
+          "SecondName": "Fundemera",
+          "Name": "Francis",
+          "Team": "GamerLegion",
+          "Nickname": "RCY",
+          "Country": "United States",
+          "Id": 602
+        },
+        {
+          "Age": 26,
+          "SecondName": "Zuev",
+          "Name": "Viktor",
+          "Team": "GamerLegion",
+          "Nickname": "Fayde",
+          "Country": "United States",
+          "Id": 603
+        },
+        {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        {
+          "Age": 26,
+          "SecondName": "Bocchicchio",
+          "Name": "Paul",
+          "Team": "GamerLegion",
+          "Nickname": "Speeed",
+          "Country": "United States",
+          "Id": 605
+        }
+      ],
+      "TeamCountry": "United States",
+      "Id": 6
+    },
+    {
+      "$type": "Team",
+      "Name": "Team Falcons",
+      "Coach": "Aui_2000",
+      "Captain": {
+        "Age": 21,
+        "SecondName": "Al-Assaf",
+        "Name": "Ammar",
+        "Team": "Team Falcons",
+        "Nickname": "ATF",
+        "Country": "Jordan",
+        "Id": 703
+      },
+      "Players": [
+        {
+          "Age": 27,
+          "SecondName": "Lepko",
+          "Name": "Oliver",
+          "Team": "Team Falcons",
+          "Nickname": "skiter",
+          "Country": "Slovakia",
+          "Id": 701
+        },
+        {
+          "Age": 28,
+          "SecondName": "Miikka Taavitsainen",
+          "Name": "Topis",
+          "Team": "Team Falcons",
+          "Nickname": "Topson",
+          "Country": "Finland",
+          "Id": 702
+        },
+        {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        {
+          "Age": 29,
+          "SecondName": "Franck Nielsen",
+          "Name": "Andreas",
+          "Team": "Team Falcons",
+          "Nickname": "Cr1t-",
+          "Country": "Denmark",
+          "Id": 704
+        },
+        {
+          "Age": 31,
+          "SecondName": "Jingjun",
+          "Name": "Wu",
+          "Team": "Team Falcons",
+          "Nickname": "Sneyking",
+          "Country": "China",
+          "Id": 705
+        }
+      ],
+      "TeamCountry": "Saudi Arabia",
+      "Id": 7
+    },
+    {
+      "$type": "Team",
+      "Name": "Tundra Esports",
+      "Coach": null,
+      "Captain": {
+        "Age": 29,
+        "SecondName": "Shapira",
+        "Name": "Neta",
+        "Team": "Tundra Esports",
+        "Nickname": "33",
+        "Country": "Israel",
+        "Id": 803
+      },
+      "Players": [
+        {
+          "Age": 24,
+          "SecondName": "Arets",
+          "Name": "Remco",
+          "Team": "Tundra Esports",
+          "Nickname": "Crystallis",
+          "Country": "Netherlands",
+          "Id": 801
+        },
+        {
+          "Age": 21,
+          "SecondName": "Bogdanov",
+          "Name": "Bozhidar",
+          "Team": "Tundra Esports",
+          "Nickname": "bzm",
+          "Country": "Bulgaria",
+          "Id": 802
+        },
+        {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        {
+          "Age": 23,
+          "SecondName": "Walker",
+          "Name": "Matthew",
+          "Team": "Tundra Esports",
+          "Nickname": "Ari",
+          "Country": "United Kingdom",
+          "Id": 804
+        },
+        {
+          "Age": 25,
+          "SecondName": "Filemon",
+          "Name": "Matthew",
+          "Team": "Tundra Esports",
+          "Nickname": "Whitemon",
+          "Country": "Indonesia",
+          "Id": 805
+        }
+      ],
+      "TeamCountry": "United Kingdom",
+      "Id": 8
+    },
+    {
+      "$type": "Team",
+      "Name": "Team Liquid",
+      "Coach": "Blitz",
+      "Captain": {
+        "Age": 26,
+        "SecondName": "Vu",
+        "Name": "Michael",
+        "Team": "Team Liquid",
+        "Nickname": "miCKe",
+        "Country": "Sweden",
+        "Id": 901
+      },
+      "Players": [
+        {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        {
+          "Age": 25,
+          "SecondName": "Jankowski",
+          "Name": "Micha\u0142",
+          "Team": "Team Liquid",
+          "Nickname": "Nisha",
+          "Country": "Poland",
+          "Id": 902
+        },
+        {
+          "Age": 32,
+          "SecondName": "Folke Hoelgaard Christensen",
+          "Name": "Marcus",
+          "Team": "Team Liquid",
+          "Nickname": "Ace",
+          "Country": "Denmark",
+          "Id": 903
+        },
+        {
+          "Age": 28,
+          "SecondName": "Svahn",
+          "Name": "Samuel",
+          "Team": "Team Liquid",
+          "Nickname": "Boxi",
+          "Country": "Sweden",
+          "Id": 904
+        },
+        {
+          "Age": 29,
+          "SecondName": "Engel",
+          "Name": "Eric",
+          "Team": "Team Liquid",
+          "Nickname": "tOfu",
+          "Country": "Germany",
+          "Id": 905
+        }
+      ],
+      "TeamCountry": "Netherlands",
+      "Id": 9
+    },
+    {
+      "$type": "Team",
+      "Name": "OG",
+      "Coach": "343",
+      "Captain": {
+        "Age": 26,
+        "SecondName": "Gabriel Ong",
+        "Name": "Rolen Andrei",
+        "Team": "OG",
+        "Nickname": "skem",
+        "Country": "Philippines",
+        "Id": 1005
+      },
+      "Players": [
+        {
+          "Age": 24,
+          "SecondName": "Anthony Vargas",
+          "Name": "John",
+          "Team": "OG",
+          "Nickname": "Natsumi",
+          "Country": "Philippines",
+          "Id": 1001
+        },
+        {
+          "Age": 24,
+          "SecondName": "Jasper Ferrer",
+          "Name": "Erin",
+          "Team": "OG",
+          "Nickname": "Yopaj",
+          "Country": "Philippines",
+          "Id": 1002
+        },
+        {
+          "Age": 28,
+          "SecondName": "Al-Barkawi",
+          "Name": "Amer",
+          "Team": "OG",
+          "Nickname": "Miracle",
+          "Country": "Jordan",
+          "Id": 1003
+        },
+        {
+          "Age": 28,
+          "SecondName": "John Randrup",
+          "Name": "Timothy",
+          "Team": "OG",
+          "Nickname": "TIMS",
+          "Country": "Philippines",
+          "Id": 1004
+        },
+        {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        }
+      ],
+      "TeamCountry": "Philippines",
+      "Id": 10
+    },
+    {
+      "$type": "Team",
+      "Name": "Xtreme Gaming",
+      "Coach": "xiao8",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 29,
+          "SecondName": "Chunyu",
+          "Name": "Wang",
+          "Team": "Xtreme Gaming",
+          "Nickname": "Ame",
+          "Country": "China",
+          "Id": 1101
+        },
+        {
+          "Age": 25,
+          "SecondName": "Jin Xiang",
+          "Name": "Cheng ",
+          "Team": "Xtreme Gaming",
+          "Nickname": "NothingToSay",
+          "Country": "Malaysia",
+          "Id": 1102
+        },
+        {
+          "Age": 26,
+          "SecondName": "Jing",
+          "Name": "Lin",
+          "Team": "Xtreme Gaming",
+          "Nickname": "Xxs",
+          "Country": "China",
+          "Id": 1103
+        },
+        {
+          "Age": 31,
+          "SecondName": "Linsen",
+          "Name": "Xu",
+          "Team": "Xtreme Gaming",
+          "Nickname": "fy",
+          "Country": "China",
+          "Id": 1104
+        },
+        {
+          "Age": 28,
+          "SecondName": "Wei",
+          "Name": "Yap Jian",
+          "Team": "Xtreme Gaming",
+          "Nickname": "xNova",
+          "Country": "Malaysia",
+          "Id": 1105
+        }
+      ],
+      "TeamCountry": "China",
+      "Id": 11
+    },
+    {
+      "$type": "Team",
+      "Name": "Vici Gaming",
+      "Coach": "Yao",
+      "Captain": {
+        "Age": 27,
+        "SecondName": "Yiping",
+        "Name": "Zhang",
+        "Team": "Vici Gaming",
+        "Nickname": "y\u0060",
+        "Country": "China",
+        "Id": 1205
+      },
+      "Players": [
+        {
+          "Age": 25,
+          "SecondName": "Xuanang",
+          "Name": "Guo",
+          "Team": "Vici Gaming",
+          "Nickname": "shiro",
+          "Country": "China",
+          "Id": 1201
+        },
+        {
+          "Age": 27,
+          "SecondName": "Hongcheng",
+          "Name": "Guo",
+          "Team": "Vici Gaming",
+          "Nickname": "Xm",
+          "Country": "China",
+          "Id": 1202
+        },
+        {
+          "Age": 28,
+          "SecondName": "Ruida",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "Bach",
+          "Country": "China",
+          "Id": 1203
+        },
+        {
+          "Age": 27,
+          "SecondName": "Zixing",
+          "Name": "Zhao",
+          "Team": "Vici Gaming",
+          "Nickname": "XinQ",
+          "Country": "China",
+          "Id": 1204
+        },
+        {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        }
+      ],
+      "TeamCountry": "China",
+      "Id": 12
+    },
+    {
+      "$type": "Team",
+      "Name": "PlayTime",
+      "Coach": "Vintage",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 18,
+          "SecondName": "Orozco Alza",
+          "Name": "M\u00E1ximo",
+          "Team": "PlayTime",
+          "Nickname": "Wits",
+          "Country": "Peru",
+          "Id": 1301
+        },
+        {
+          "Age": 27,
+          "SecondName": "Herrera Mart\u00EDnez",
+          "Name": "Oswaldo Gonzalo",
+          "Team": "PlayTime",
+          "Nickname": "DarkMago",
+          "Country": "Peru",
+          "Id": 1302
+        },
+        {
+          "Age": 25,
+          "SecondName": "Arias Ayala",
+          "Name": "Frank Alberto",
+          "Team": "PlayTime",
+          "Nickname": "Frank",
+          "Country": "Peru",
+          "Id": 1303
+        },
+        {
+          "Age": 28,
+          "SecondName": "Pe\u00F1a",
+          "Name": "Elvis De la Cruz",
+          "Team": "PlayTime",
+          "Nickname": "Scofield",
+          "Country": "Peru",
+          "Id": 1304
+        },
+        {
+          "Age": 24,
+          "SecondName": "Verde Hurtado",
+          "Name": "Yelsthin Brayan",
+          "Team": "PlayTime",
+          "Nickname": "Elmisho",
+          "Country": "Peru",
+          "Id": 1305
+        }
+      ],
+      "TeamCountry": "Peru",
+      "Id": 13
+    },
+    {
+      "$type": "Team",
+      "Name": "REKONIX",
+      "Coach": "MinD_ContRoL",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 22,
+          "SecondName": "Pamungkas",
+          "Name": "Musthofa Dzikry",
+          "Team": "REKONIX",
+          "Nickname": "Jikroy",
+          "Country": "Indonesia",
+          "Id": 1401
+        },
+        {
+          "Age": 27,
+          "SecondName": "Rizky Anugrah",
+          "Name": "Muhammad",
+          "Team": "REKONIX",
+          "Nickname": "inYourdreaM",
+          "Country": "Indonesia",
+          "Id": 1402
+        },
+        {
+          "Age": 25,
+          "SecondName": "Saieful Ilham",
+          "Name": "Muhammad",
+          "Team": "REKONIX",
+          "Nickname": "Fbz",
+          "Country": "Indonesia",
+          "Id": 1403
+        },
+        {
+          "Age": 23,
+          "SecondName": "Putra Afemi",
+          "Name": "Abdalla",
+          "Team": "REKONIX",
+          "Nickname": "dalul",
+          "Country": "Indonesia",
+          "Id": 1404
+        },
+        {
+          "Age": 30,
+          "SecondName": "Varizh",
+          "Name": "Rizki",
+          "Team": "REKONIX",
+          "Nickname": "Putra Afemi",
+          "Country": "Indonesia",
+          "Id": 1405
+        }
+      ],
+      "TeamCountry": "Indonesia",
+      "Id": 14
+    },
+    {
+      "$type": "Team",
+      "Name": "Aurora Gaming",
+      "Coach": "kpii",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 28,
+          "SecondName": "Kirilin",
+          "Name": "Leon",
+          "Team": "Aurora Gaming",
+          "Nickname": "Nine",
+          "Country": "Germany",
+          "Id": 1501
+        },
+        {
+          "Age": 26,
+          "SecondName": "Fathur Rahman",
+          "Name": "Rafli",
+          "Team": "Aurora Gaming",
+          "Nickname": "Mikoto",
+          "Country": "Indonesia",
+          "Id": 1502
+        },
+        {
+          "Age": 20,
+          "SecondName": "Shen",
+          "Name": "Chung Wei",
+          "Team": "Aurora Gaming",
+          "Nickname": "Ws",
+          "Country": "Malaysia",
+          "Id": 1503
+        },
+        {
+          "Age": 26,
+          "SecondName": "Kolpakov",
+          "Name": "Myroslav",
+          "Team": "Aurora Gaming",
+          "Nickname": "Mira",
+          "Country": "Ukraine",
+          "Id": 1504
+        },
+        {
+          "Age": 23,
+          "SecondName": "Medvedok",
+          "Name": "Oleh",
+          "Team": "Aurora Gaming",
+          "Nickname": "kaori",
+          "Country": "Ukraine",
+          "Id": 1505
+        }
+      ],
+      "TeamCountry": "Serbia",
+      "Id": 15
+    },
+    {
+      "$type": "Team",
+      "Name": "Ukraine Dragon",
+      "Coach": "Milan",
+      "Captain": null,
+      "Players": [
+        {
+          "Age": 23,
+          "SecondName": "Mulyarchuk",
+          "Name": "Illya",
+          "Team": "Team Spirit",
+          "Nickname": "Yatoro",
+          "Country": "Ukraine",
+          "Id": 1601
+        },
+        {
+          "Age": 27,
+          "SecondName": "Minenko",
+          "Name": "Volodymyr",
+          "Team": "Team Spirit",
+          "Nickname": "N[O]one",
+          "Country": "Ukraine",
+          "Id": 1602
+        },
+        {
+          "Age": 25,
+          "SecondName": "Volek",
+          "Name": "Jon\u00E1s",
+          "Team": "Team Spirit",
+          "Nickname": "SabeRLight-",
+          "Country": "Czehia",
+          "Id": 1603
+        },
+        {
+          "Age": 31,
+          "SecondName": "Urpalainen",
+          "Name": "Lasse Aukusti",
+          "Team": "Team Spirit",
+          "Nickname": "MATUMBAMAN",
+          "Country": "Finland",
+          "Id": 1604
+        },
+        {
+          "Age": 34,
+          "SecondName": "F\u00E9lix Albert Debs",
+          "Name": "S\u00E9bastie",
+          "Team": "Team Spirit",
+          "Nickname": "Ceb",
+          "Country": "France",
+          "Id": 1605
+        }
+      ],
+      "TeamCountry": "Ukraine",
+      "Id": 16
+    }
+  ],
+  "IsStarted": false,
+  "Matches": [
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Presidents ",
+        "Coach": "ElonMusk",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Trump",
+          "Name": "Donald",
+          "Team": "Presidents ",
+          "Nickname": "MakeAmericaGreatAgain",
+          "Country": "United States",
+          "Id": 101
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Trump",
+            "Name": "Donald",
+            "Team": "Presidents ",
+            "Nickname": "MakeAmericaGreatAgain",
+            "Country": "United States",
+            "Id": 101
+          },
+          {
+            "Age": 18,
+            "SecondName": "Zelenskiy",
+            "Name": "Volodymyr ",
+            "Team": "Presidents ",
+            "Nickname": "ZeleBoba",
+            "Country": "Ukraine",
+            "Id": 102
+          },
+          {
+            "Age": 18,
+            "SecondName": "Obama",
+            "Name": "Baraca",
+            "Team": "Presidents ",
+            "Nickname": "Black",
+            "Country": "United States",
+            "Id": 103
+          },
+          {
+            "Age": 18,
+            "SecondName": "Lukashenko ",
+            "Name": "Oleksandr ",
+            "Team": "Presidents ",
+            "Nickname": "MorePotatoes",
+            "Country": "Belarus",
+            "Id": 104
+          },
+          {
+            "Age": 18,
+            "SecondName": "Baiden",
+            "Name": "Joe",
+            "Team": "Presidents ",
+            "Nickname": "Don\u0027t remember ",
+            "Country": "Unites States",
+            "Id": 105
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 1
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "NaVi",
+        "Coach": "Cy-",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 21,
+            "SecondName": "Linnikov",
+            "Name": "Taras",
+            "Team": "NaVi",
+            "Nickname": "gotthejuice",
+            "Country": "Ukraine",
+            "Id": 501
+          },
+          {
+            "Age": 17,
+            "SecondName": "Bachkur",
+            "Name": "Artem",
+            "Team": "NaVi",
+            "Nickname": "Niku",
+            "Country": "Ukraine",
+            "Id": 502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Prots",
+            "Name": "Yurii",
+            "Team": "NaVi",
+            "Nickname": "pna",
+            "Country": "Ukraine",
+            "Id": 503
+          },
+          {
+            "Age": 20,
+            "SecondName": "Tokpanov",
+            "Name": "Tamir",
+            "Team": "NaVi",
+            "Nickname": "daze",
+            "Country": "Kazakhstan",
+            "Id": 504
+          },
+          {
+            "Age": 20,
+            "SecondName": "Mitroshkyn",
+            "Name": "Stanislav",
+            "Team": "NaVi",
+            "Nickname": "Riddys",
+            "Country": "Ukraine",
+            "Id": 505
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 5
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Liquid",
+        "Coach": "Blitz",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Vu",
+          "Name": "Michael",
+          "Team": "Team Liquid",
+          "Nickname": "miCKe",
+          "Country": "Sweden",
+          "Id": 901
+        },
+        "Players": [
+          {
+            "Age": 26,
+            "SecondName": "Vu",
+            "Name": "Michael",
+            "Team": "Team Liquid",
+            "Nickname": "miCKe",
+            "Country": "Sweden",
+            "Id": 901
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jankowski",
+            "Name": "Micha\u0142",
+            "Team": "Team Liquid",
+            "Nickname": "Nisha",
+            "Country": "Poland",
+            "Id": 902
+          },
+          {
+            "Age": 32,
+            "SecondName": "Folke Hoelgaard Christensen",
+            "Name": "Marcus",
+            "Team": "Team Liquid",
+            "Nickname": "Ace",
+            "Country": "Denmark",
+            "Id": 903
+          },
+          {
+            "Age": 28,
+            "SecondName": "Svahn",
+            "Name": "Samuel",
+            "Team": "Team Liquid",
+            "Nickname": "Boxi",
+            "Country": "Sweden",
+            "Id": 904
+          },
+          {
+            "Age": 29,
+            "SecondName": "Engel",
+            "Name": "Eric",
+            "Team": "Team Liquid",
+            "Nickname": "tOfu",
+            "Country": "Germany",
+            "Id": 905
+          }
+        ],
+        "TeamCountry": "Netherlands",
+        "Id": 9
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "PlayTime",
+        "Coach": "Vintage",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Orozco Alza",
+            "Name": "M\u00E1ximo",
+            "Team": "PlayTime",
+            "Nickname": "Wits",
+            "Country": "Peru",
+            "Id": 1301
+          },
+          {
+            "Age": 27,
+            "SecondName": "Herrera Mart\u00EDnez",
+            "Name": "Oswaldo Gonzalo",
+            "Team": "PlayTime",
+            "Nickname": "DarkMago",
+            "Country": "Peru",
+            "Id": 1302
+          },
+          {
+            "Age": 25,
+            "SecondName": "Arias Ayala",
+            "Name": "Frank Alberto",
+            "Team": "PlayTime",
+            "Nickname": "Frank",
+            "Country": "Peru",
+            "Id": 1303
+          },
+          {
+            "Age": 28,
+            "SecondName": "Pe\u00F1a",
+            "Name": "Elvis De la Cruz",
+            "Team": "PlayTime",
+            "Nickname": "Scofield",
+            "Country": "Peru",
+            "Id": 1304
+          },
+          {
+            "Age": 24,
+            "SecondName": "Verde Hurtado",
+            "Name": "Yelsthin Brayan",
+            "Team": "PlayTime",
+            "Nickname": "Elmisho",
+            "Country": "Peru",
+            "Id": 1305
+          }
+        ],
+        "TeamCountry": "Peru",
+        "Id": 13
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "UkraineSquad",
+        "Coach": "Ynaukovich",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Yatsenuk",
+          "Name": "Arseniy",
+          "Team": "UkraineSquad",
+          "Nickname": "Kulyavlob",
+          "Country": "Ukraine",
+          "Id": 205
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Lyshko ",
+            "Name": "Oleh",
+            "Team": "UkraineSquad",
+            "Nickname": "Skotinyki",
+            "Country": "Ukraine ",
+            "Id": 201
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klichko ",
+            "Name": "Vitaliy ",
+            "Team": "UkraineSquad",
+            "Nickname": "Boxer",
+            "Country": "Ukraine",
+            "Id": 202
+          },
+          {
+            "Age": 18,
+            "SecondName": "Timoshenko",
+            "Name": "Yulya ",
+            "Team": "UkraineSquad",
+            "Nickname": "Jail",
+            "Country": "Ukraine",
+            "Id": 203
+          },
+          {
+            "Age": 18,
+            "SecondName": "Borisenko",
+            "Name": "Andrey",
+            "Team": "UkraineSquad",
+            "Nickname": "FreeFromSizo",
+            "Country": "Ukraine",
+            "Id": 204
+          },
+          {
+            "Age": 18,
+            "SecondName": "Yatsenuk",
+            "Name": "Arseniy",
+            "Team": "UkraineSquad",
+            "Nickname": "Kulyavlob",
+            "Country": "Ukraine",
+            "Id": 205
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 2
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "GamerLegion",
+        "Coach": "Mangusu",
+        "Captain": {
+          "Age": 31,
+          "SecondName": "Shekhovtsov",
+          "Name": "Danil",
+          "Team": "GamerLegion",
+          "Nickname": "Bignum",
+          "Country": "Ukraine",
+          "Id": 604
+        },
+        "Players": [
+          {
+            "Age": 28,
+            "SecondName": "Kok Hong",
+            "Name": "Daniel Chan",
+            "Team": "GamerLegion",
+            "Nickname": "Ghost",
+            "Country": "Malaysia",
+            "Id": 601
+          },
+          {
+            "Age": 19,
+            "SecondName": "Fundemera",
+            "Name": "Francis",
+            "Team": "GamerLegion",
+            "Nickname": "RCY",
+            "Country": "United States",
+            "Id": 602
+          },
+          {
+            "Age": 26,
+            "SecondName": "Zuev",
+            "Name": "Viktor",
+            "Team": "GamerLegion",
+            "Nickname": "Fayde",
+            "Country": "United States",
+            "Id": 603
+          },
+          {
+            "Age": 31,
+            "SecondName": "Shekhovtsov",
+            "Name": "Danil",
+            "Team": "GamerLegion",
+            "Nickname": "Bignum",
+            "Country": "Ukraine",
+            "Id": 604
+          },
+          {
+            "Age": 26,
+            "SecondName": "Bocchicchio",
+            "Name": "Paul",
+            "Team": "GamerLegion",
+            "Nickname": "Speeed",
+            "Country": "United States",
+            "Id": 605
+          }
+        ],
+        "TeamCountry": "United States",
+        "Id": 6
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "OG",
+        "Coach": "343",
+        "Captain": {
+          "Age": 26,
+          "SecondName": "Gabriel Ong",
+          "Name": "Rolen Andrei",
+          "Team": "OG",
+          "Nickname": "skem",
+          "Country": "Philippines",
+          "Id": 1005
+        },
+        "Players": [
+          {
+            "Age": 24,
+            "SecondName": "Anthony Vargas",
+            "Name": "John",
+            "Team": "OG",
+            "Nickname": "Natsumi",
+            "Country": "Philippines",
+            "Id": 1001
+          },
+          {
+            "Age": 24,
+            "SecondName": "Jasper Ferrer",
+            "Name": "Erin",
+            "Team": "OG",
+            "Nickname": "Yopaj",
+            "Country": "Philippines",
+            "Id": 1002
+          },
+          {
+            "Age": 29,
+            "SecondName": "Khertek",
+            "Name": "Alexander",
+            "Team": "OG",
+            "Nickname": "TORONTOTOKYO",
+            "Country": "Russia",
+            "Id": 1003
+          },
+          {
+            "Age": 28,
+            "SecondName": "John Randrup",
+            "Name": "Timothy",
+            "Team": "OG",
+            "Nickname": "TIMS",
+            "Country": "Philippines",
+            "Id": 1004
+          },
+          {
+            "Age": 26,
+            "SecondName": "Gabriel Ong",
+            "Name": "Rolen Andrei",
+            "Team": "OG",
+            "Nickname": "skem",
+            "Country": "Philippines",
+            "Id": 1005
+          }
+        ],
+        "TeamCountry": "Philippines",
+        "Id": 10
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "REKONIX",
+        "Coach": "MinD_ContRoL",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Pamungkas",
+            "Name": "Musthofa Dzikry",
+            "Team": "REKONIX",
+            "Nickname": "Jikroy",
+            "Country": "Indonesia",
+            "Id": 1401
+          },
+          {
+            "Age": 27,
+            "SecondName": "Rizky Anugrah",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "inYourdreaM",
+            "Country": "Indonesia",
+            "Id": 1402
+          },
+          {
+            "Age": 25,
+            "SecondName": "Saieful Ilham",
+            "Name": "Muhammad",
+            "Team": "REKONIX",
+            "Nickname": "Fbz",
+            "Country": "Indonesia",
+            "Id": 1403
+          },
+          {
+            "Age": 23,
+            "SecondName": "Putra Afemi",
+            "Name": "Abdalla",
+            "Team": "REKONIX",
+            "Nickname": "dalul",
+            "Country": "Indonesia",
+            "Id": 1404
+          },
+          {
+            "Age": 30,
+            "SecondName": "Varizh",
+            "Name": "Rizki",
+            "Team": "REKONIX",
+            "Nickname": "Putra Afemi",
+            "Country": "Indonesia",
+            "Id": 1405
+          }
+        ],
+        "TeamCountry": "Indonesia",
+        "Id": 14
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "KPIUNIVRSITYSQUAD",
+        "Coach": "Sulema",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Legeza ",
+          "Name": "Viktor",
+          "Team": "KPIUNIVRSITYSQUAD",
+          "Nickname": "Integrali",
+          "Country": "Ukraine",
+          "Id": 305
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Skostyrev",
+            "Name": "Ihor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Sloupok228",
+            "Country": "Ukraine ",
+            "Id": 301
+          },
+          {
+            "Age": 18,
+            "SecondName": "Vernik",
+            "Name": "Mykhyilo",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "VSOLO",
+            "Country": "Ukraine",
+            "Id": 302
+          },
+          {
+            "Age": 18,
+            "SecondName": "Neshadim",
+            "Name": "Oleksander",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Neshad67",
+            "Country": "Ukraine",
+            "Id": 303
+          },
+          {
+            "Age": 18,
+            "SecondName": "Suschuk-Slusarenko",
+            "Name": "Victoria ",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Vertolotic",
+            "Country": "Ukraine",
+            "Id": 304
+          },
+          {
+            "Age": 18,
+            "SecondName": "Legeza ",
+            "Name": "Viktor",
+            "Team": "KPIUNIVRSITYSQUAD",
+            "Nickname": "Integrali",
+            "Country": "Ukraine",
+            "Id": 305
+          }
+        ],
+        "TeamCountry": "Ukraine",
+        "Id": 3
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Team Falcons",
+        "Coach": "Aui_2000",
+        "Captain": {
+          "Age": 21,
+          "SecondName": "Al-Assaf",
+          "Name": "Ammar",
+          "Team": "Team Falcons",
+          "Nickname": "ATF",
+          "Country": "Jordan",
+          "Id": 703
+        },
+        "Players": [
+          {
+            "Age": 27,
+            "SecondName": "Lepko",
+            "Name": "Oliver",
+            "Team": "Team Falcons",
+            "Nickname": "skiter",
+            "Country": "Slovakia",
+            "Id": 701
+          },
+          {
+            "Age": 21,
+            "SecondName": "Potorak",
+            "Name": "Stanislav",
+            "Team": "Team Falcons",
+            "Nickname": "Malr1ne",
+            "Country": "Russia",
+            "Id": 702
+          },
+          {
+            "Age": 21,
+            "SecondName": "Al-Assaf",
+            "Name": "Ammar",
+            "Team": "Team Falcons",
+            "Nickname": "ATF",
+            "Country": "Jordan",
+            "Id": 703
+          },
+          {
+            "Age": 29,
+            "SecondName": "Franck Nielsen",
+            "Name": "Andreas",
+            "Team": "Team Falcons",
+            "Nickname": "Cr1t-",
+            "Country": "Denmark",
+            "Id": 704
+          },
+          {
+            "Age": 31,
+            "SecondName": "Jingjun",
+            "Name": "Wu",
+            "Team": "Team Falcons",
+            "Nickname": "Sneyking",
+            "Country": "China",
+            "Id": 705
+          }
+        ],
+        "TeamCountry": "Saudi Arabia",
+        "Id": 7
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Xtreme Gaming",
+        "Coach": "xiao8",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 29,
+            "SecondName": "Chunyu",
+            "Name": "Wang",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Ame",
+            "Country": "China",
+            "Id": 1101
+          },
+          {
+            "Age": 25,
+            "SecondName": "Jin Xiang",
+            "Name": "Cheng ",
+            "Team": "Xtreme Gaming",
+            "Nickname": "NothingToSay",
+            "Country": "Malaysia",
+            "Id": 1102
+          },
+          {
+            "Age": 26,
+            "SecondName": "Jing",
+            "Name": "Lin",
+            "Team": "Xtreme Gaming",
+            "Nickname": "Xxs",
+            "Country": "China",
+            "Id": 1103
+          },
+          {
+            "Age": 31,
+            "SecondName": "Linsen",
+            "Name": "Xu",
+            "Team": "Xtreme Gaming",
+            "Nickname": "fy",
+            "Country": "China",
+            "Id": 1104
+          },
+          {
+            "Age": 28,
+            "SecondName": "Wei",
+            "Name": "Yap Jian",
+            "Team": "Xtreme Gaming",
+            "Nickname": "xNova",
+            "Country": "Malaysia",
+            "Id": 1105
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 11
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Aurora Gaming",
+        "Coach": "kpii",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Grigorenko",
+            "Name": "Egor",
+            "Team": "Aurora Gaming",
+            "Nickname": "Nightfall",
+            "Country": "Russia",
+            "Id": 1501
+          },
+          {
+            "Age": 26,
+            "SecondName": "Fathur Rahman",
+            "Name": "Rafli",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mikoto",
+            "Country": "Indonesia",
+            "Id": 1502
+          },
+          {
+            "Age": 20,
+            "SecondName": "Shen",
+            "Name": "Chung Wei",
+            "Team": "Aurora Gaming",
+            "Nickname": "Ws",
+            "Country": "Malaysia",
+            "Id": 1503
+          },
+          {
+            "Age": 26,
+            "SecondName": "Kolpakov",
+            "Name": "Myroslav",
+            "Team": "Aurora Gaming",
+            "Nickname": "Mira",
+            "Country": "Ukraine",
+            "Id": 1504
+          },
+          {
+            "Age": 23,
+            "SecondName": "Medvedok",
+            "Name": "Oleh",
+            "Team": "Aurora Gaming",
+            "Nickname": "kaori",
+            "Country": "Ukraine",
+            "Id": 1505
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 15
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "EpsteinFileLeaders",
+        "Coach": "Bionce",
+        "Captain": {
+          "Age": 18,
+          "SecondName": "Epstein ",
+          "Name": "Jefrey",
+          "Team": "EpsteinFileLeaders",
+          "Nickname": "KindUncle",
+          "Country": "United States",
+          "Id": 403
+        },
+        "Players": [
+          {
+            "Age": 18,
+            "SecondName": "Diddy",
+            "Name": "Shon",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KidOil",
+            "Country": "United States",
+            "Id": 401
+          },
+          {
+            "Age": 18,
+            "SecondName": "Klinton",
+            "Name": "Bill",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "BigDaddy",
+            "Country": "United States",
+            "Id": 402
+          },
+          {
+            "Age": 18,
+            "SecondName": "Epstein ",
+            "Name": "Jefrey",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "KindUncle",
+            "Country": "United States",
+            "Id": 403
+          },
+          {
+            "Age": 18,
+            "SecondName": "Kori-Karter",
+            "Name": "Shon ",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Jay-Z",
+            "Country": "United States",
+            "Id": 404
+          },
+          {
+            "Age": 18,
+            "SecondName": "Poplavskiy",
+            "Name": "Mykhailo",
+            "Team": "EpsteinFileLeaders",
+            "Nickname": "Poplavkiy",
+            "Country": "Ukraine",
+            "Id": 405
+          }
+        ],
+        "TeamCountry": "United States ",
+        "Id": 4
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Tundra Esports",
+        "Coach": null,
+        "Captain": {
+          "Age": 29,
+          "SecondName": "Shapira",
+          "Name": "Neta",
+          "Team": "Tundra Esports",
+          "Nickname": "33",
+          "Country": "Israel",
+          "Id": 803
+        },
+        "Players": [
+          {
+            "Age": 22,
+            "SecondName": "Moskalenko",
+            "Name": "Ivan",
+            "Team": "Tundra Esports",
+            "Nickname": "Pure",
+            "Country": "Russia",
+            "Id": 801
+          },
+          {
+            "Age": 21,
+            "SecondName": "Bogdanov",
+            "Name": "Bozhidar",
+            "Team": "Tundra Esports",
+            "Nickname": "bzm",
+            "Country": "Bulgaria",
+            "Id": 802
+          },
+          {
+            "Age": 29,
+            "SecondName": "Shapira",
+            "Name": "Neta",
+            "Team": "Tundra Esports",
+            "Nickname": "33",
+            "Country": "Israel",
+            "Id": 803
+          },
+          {
+            "Age": 23,
+            "SecondName": "Walker",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Ari",
+            "Country": "United Kingdom",
+            "Id": 804
+          },
+          {
+            "Age": 25,
+            "SecondName": "Filemon",
+            "Name": "Matthew",
+            "Team": "Tundra Esports",
+            "Nickname": "Whitemon",
+            "Country": "Indonesia",
+            "Id": 805
+          }
+        ],
+        "TeamCountry": "United Kingdom",
+        "Id": 8
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    },
+    {
+      "FirstParticipant": {
+        "$type": "Team",
+        "Name": "Vici Gaming",
+        "Coach": "Yao",
+        "Captain": {
+          "Age": 27,
+          "SecondName": "Yiping",
+          "Name": "Zhang",
+          "Team": "Vici Gaming",
+          "Nickname": "y\u0060",
+          "Country": "China",
+          "Id": 1205
+        },
+        "Players": [
+          {
+            "Age": 25,
+            "SecondName": "Xuanang",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "shiro",
+            "Country": "China",
+            "Id": 1201
+          },
+          {
+            "Age": 27,
+            "SecondName": "Hongcheng",
+            "Name": "Guo",
+            "Team": "Vici Gaming",
+            "Nickname": "Xm",
+            "Country": "China",
+            "Id": 1202
+          },
+          {
+            "Age": 28,
+            "SecondName": "Ruida",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "Bach",
+            "Country": "China",
+            "Id": 1203
+          },
+          {
+            "Age": 27,
+            "SecondName": "Zixing",
+            "Name": "Zhao",
+            "Team": "Vici Gaming",
+            "Nickname": "XinQ",
+            "Country": "China",
+            "Id": 1204
+          },
+          {
+            "Age": 27,
+            "SecondName": "Yiping",
+            "Name": "Zhang",
+            "Team": "Vici Gaming",
+            "Nickname": "y\u0060",
+            "Country": "China",
+            "Id": 1205
+          }
+        ],
+        "TeamCountry": "China",
+        "Id": 12
+      },
+      "SecondParticipant": {
+        "$type": "Team",
+        "Name": "Team Spirit",
+        "Coach": "Milan",
+        "Captain": null,
+        "Players": [
+          {
+            "Age": 23,
+            "SecondName": "Mulyarchuk",
+            "Name": "Illya",
+            "Team": "Team Spirit",
+            "Nickname": "Yatoro",
+            "Country": "Ukraine",
+            "Id": 1601
+          },
+          {
+            "Age": 24,
+            "SecondName": "Sigitov",
+            "Name": "Denis",
+            "Team": "Team Spirit",
+            "Nickname": "LarI",
+            "Country": "Russia",
+            "Id": 1602
+          },
+          {
+            "Age": 24,
+            "SecondName": "Khalilov",
+            "Name": "Magomed",
+            "Team": "Team Spirit",
+            "Nickname": "Collapse",
+            "Country": "Russia",
+            "Id": 1603
+          },
+          {
+            "Age": 22,
+            "SecondName": "Kosmynin",
+            "Name": "Alexey",
+            "Team": "Team Spirit",
+            "Nickname": "not me",
+            "Country": "Russia",
+            "Id": 1604
+          },
+          {
+            "Age": 22,
+            "SecondName": "Filin",
+            "Name": "Aleksandr",
+            "Team": "Team Spirit",
+            "Nickname": "rue",
+            "Country": "Russia",
+            "Id": 1605
+          }
+        ],
+        "TeamCountry": "Serbia",
+        "Id": 16
+      },
+      "Scores": [],
+      "IsCompleted": false,
+      "Status": 0,
+      "Id": 0
+    }
+  ],
+  "Id": 0
+}
