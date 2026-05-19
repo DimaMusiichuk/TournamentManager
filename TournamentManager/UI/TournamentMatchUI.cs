@@ -273,10 +273,24 @@ public class TournamentMatchUI
         {
             maxWinsNeeded = 3;
         }
-    
-        Console.Write($"\nСкільки карт змогла виграти команда, що програла? (Від 0 до {maxWinsNeeded - 1}): ");
-        int loserScore = int.Parse(Console.ReadLine()!); 
+
+        int loserScore = 0;
+
+        while (true)
+        {
+            Console.Write($"\nСкільки карт змогла виграти команда, що програла? (Від 0 до {maxWinsNeeded - 1}): ");
         
+            if (int.TryParse(Console.ReadLine(), out loserScore))
+            {
+                if (loserScore >= 0 && loserScore < maxWinsNeeded)
+                {
+                    break;
+                }
+            }
+        
+            Console.WriteLine($"Помилка: введіть число в діапазоні від 0 до {maxWinsNeeded - 1}!");
+        }
+    
         if (winnerChoice == 1)
         {
             score.FirstScore = maxWinsNeeded;
@@ -287,21 +301,29 @@ public class TournamentMatchUI
             score.FirstScore = loserScore;
             score.SecondScore = maxWinsNeeded;
         }
-    
+
         return maxWinsNeeded + loserScore;
     }
 
     private void CollectMapStatistics(Match match, int mapsPlayed)
     {
-    Console.WriteLine($"\n--- Детальна статистика за {mapsPlayed} зіграних мап ---");
+        Console.WriteLine($"\n--- Детальна статистика за {mapsPlayed} зіграних мап ---");
         for (int i = 1; i <= mapsPlayed; i++)
         {
             Console.WriteLine($"\nМапа {i}:");
             Console.Write($"Статистика команди [{match.FirstParticipant.Name}]: ");
-            string stats1 = Console.ReadLine()!;
+            int stats1 = int.Parse(Console.ReadLine()!);
         
             Console.Write($"Статистика команди [{match.SecondParticipant.Name}]: ");
-            string stats2 = Console.ReadLine()!;
+            int stats2 = int.Parse(Console.ReadLine()!);
+            
+            if (match.Scores.Count < i)
+            {
+                match.Scores.Add(new Score());
+            }
+            
+            match.Scores[i - 1].FirstScore = stats1;
+            match.Scores[i - 1].SecondScore = stats2;
         
             Console.WriteLine($"=> Результат Мапи {i} збережено: {stats1} : {stats2}");
         }
